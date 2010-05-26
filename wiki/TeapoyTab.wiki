@@ -1,3 +1,8 @@
 #summary Teapoy Wiki 侧边栏
 
-* [Teapoy Teapoy]
+* [Teapoy 关于Teapoy]
+* 项目目标
+ * [TeapoyTarget001 0.1版本项目目标]
+ * [TeapoyTarget002 0.2版本项目目标]
+ * [TeapoyTarget003 0.3版本项目目标]
+ * [TeapoyTarget004 0.4版本项目目标]
