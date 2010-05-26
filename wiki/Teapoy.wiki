@@ -1,4 +1,5 @@
 #summary 茶具项目Wiki首页
+#sidebar TeapoyTab
 
 = 快速导航 =
 
