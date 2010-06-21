@@ -1,9 +1,9 @@
 #include <ClanLib/application.h>
 
-#include "program.h"
+#include "main.h"
 #include "app.h"
 
-CL_ClanApplication app(&T_Program::main);
+CL_ClanApplication app(&T_Main::main);
 
 /** 
  * @brief Program initial
@@ -12,7 +12,7 @@ CL_ClanApplication app(&T_Program::main);
  * 
  * @return 
  */
-int T_Program::main(const std::vector<CL_String> &args)
+int T_Main::main(const std::vector<CL_String> &args)
 {
 	//Initial ClanLib base component
 	CL_SetupCore setup_core;
