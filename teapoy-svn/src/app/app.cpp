@@ -1,6 +1,6 @@
 #include "app.h"
 
-T_App::T_App() : mQuit(false)
+T_App::T_App()
 {
 	/* code */
 }
@@ -14,16 +14,10 @@ int T_App::start()
 
 	while (!mQuit)
 	{
-		event();
 		loop();
 		render();
 	}
 
 	mpConsole->display_close_message();
 	return 0;
-}
-
-void T_App::closeWindow()
-{
-	mQuit = true;
 }

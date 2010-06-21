@@ -13,9 +13,6 @@ bool T_App::init()
 	mpWinManager = new CL_GUIWindowManagerTexture(*mpDisplayWindow);
 	mGui.set_window_manager(*mpWinManager);
 
-	//binding close signal to displayWindow
-	CL_Slot slot = mpDisplayWindow->sig_window_close().connect(this, &T_App::closeWindow);
-
 	//initail console window
 	mpConsole = new CL_ConsoleWindow("Console", 80, 100);
 
@@ -24,14 +21,18 @@ bool T_App::init()
 	mKeyboard = mInput.get_keyboard();
 	mMouse = mInput.get_mouse();
 	//mJoystick = mInput.get_joystick();
-	return true;
+	
 	}
 	catch (CL_Exception &exception)
 	{
-		CL_Console::write_line("Exception", exception.get_message_and_stack_trace());
+		CL_Console::write_line("Exception",
+			exception.get_message_and_stack_trace());
 		mpConsole->display_close_message();
 		return false;
 	}
+
+	eventInit();
+	return true;
 }
 
 
