@@ -1,0 +1,98 @@
+!_TAG_FILE_FORMAT	2	/extended format; --format=1 will not append ;" to lines/
+!_TAG_FILE_SORTED	1	/0=unsorted, 1=sorted, 2=foldcase/
+!_TAG_PROGRAM_AUTHOR	Darren Hiebert	/dhiebert@users.sourceforge.net/
+!_TAG_PROGRAM_NAME	Exuberant Ctags	//
+!_TAG_PROGRAM_URL	http://ctags.sourceforge.net	/official site/
+!_TAG_PROGRAM_VERSION	5.8	//
+APP_H	app.h	2;"	d
+CC	Makefile	/^CC=g++$/;"	m
+CFLAGS	Makefile	/^CFLAGS=-g -Wall$/;"	m
+FILES	Makefile	/^FILES:=$(filter %.cc,$(FILES))$/;"	m
+FILES	Makefile	/^FILES:=$(shell ls)$/;"	m
+LIBS	Makefile	/^LIBS = `pkg-config --libs $(PACKAGES)`$/;"	m
+LINKLIB	Makefile	/^LINKLIB   = -lpthread -lbox2d$/;"	m
+OBJECTS	Makefile	/^OBJECTS:=$(FILES:cc=o)$/;"	m
+PACKAGES	Makefile	/^PACKAGES = clanCore-2.1 clanDisplay-2.1 clanApp-2.1 clanGL-2.1 clanGUI-2.1$/;"	m
+PROGRAM_H	program.h	2;"	d
+T_App	app.cc	/^T_App::T_App() : mQuit(false)$/;"	f	class:T_App	signature:()
+T_App	app.h	/^	T_App ();$/;"	p	class:T_App	access:public	signature:()
+T_App	app.h	/^	T_App ();$/;"	p	class:T_App	signature:()
+T_App	app.h	/^class T_App $/;"	c
+T_App	start.cc	/^T_App::T_App() : mQuit(false)$/;"	f	class:T_App	signature:()
+T_App::T_App	app.cc	/^T_App::T_App() : mQuit(false)$/;"	f	class:T_App	signature:()
+T_App::T_App	app.h	/^	T_App ();$/;"	p	class:T_App	access:public	signature:()
+T_App::T_App	start.cc	/^T_App::T_App() : mQuit(false)$/;"	f	class:T_App	signature:()
+T_App::closeWindow	app.cc	/^void T_App::closeWindow()$/;"	f	class:T_App	signature:()
+T_App::closeWindow	app.h	/^	void closeWindow();$/;"	p	class:T_App	access:public	signature:()
+T_App::closeWindow	start.cc	/^void T_App::closeWindow()$/;"	f	class:T_App	signature:()
+T_App::console	app.h	/^	CL_Console console;$/;"	m	class:T_App	access:private
+T_App::event	app.h	/^	void event();$/;"	p	class:T_App	access:public	signature:()
+T_App::event	event.cc	/^void T_App::event()$/;"	f	class:T_App	signature:()
+T_App::init	app.h	/^	bool init();$/;"	p	class:T_App	access:public	signature:()
+T_App::init	init.cc	/^bool T_App::init()$/;"	f	class:T_App	signature:()
+T_App::loop	app.h	/^	void loop();$/;"	p	class:T_App	access:public	signature:()
+T_App::loop	loop.cc	/^void T_App::loop()$/;"	f	class:T_App	signature:()
+T_App::mGui	app.h	/^	CL_GUIManager mGui;$/;"	m	class:T_App	access:private
+T_App::mInput	app.h	/^	CL_InputContext mInput;$/;"	m	class:T_App	access:private
+T_App::mKeyboard	app.h	/^	CL_InputDevice mKeyboard;$/;"	m	class:T_App	access:private
+T_App::mMouse	app.h	/^	CL_InputDevice mMouse;$/;"	m	class:T_App	access:private
+T_App::mQuit	app.h	/^	bool mQuit;$/;"	m	class:T_App	access:private
+T_App::mWinDesc	app.h	/^	CL_DisplayWindowDescription mWinDesc;$/;"	m	class:T_App	access:private
+T_App::mpConsole	app.h	/^	CL_ConsoleWindow *mpConsole;$/;"	m	class:T_App	access:private
+T_App::mpDisplayWindow	app.h	/^	CL_DisplayWindow *mpDisplayWindow;$/;"	m	class:T_App	access:private
+T_App::mpWinManager	app.h	/^	CL_GUIWindowManagerTexture *mpWinManager;$/;"	m	class:T_App	access:private
+T_App::render	app.h	/^	void render();$/;"	p	class:T_App	access:public	signature:()
+T_App::render	render.cc	/^void T_App::render()$/;"	f	class:T_App	signature:()
+T_App::slot	app.h	/^	CL_Slot slot;$/;"	m	class:T_App	access:private
+T_App::start	app.cc	/^int T_App::start()$/;"	f	class:T_App	signature:()
+T_App::start	app.h	/^	int  start();$/;"	p	class:T_App	access:public	signature:()
+T_App::start	start.cc	/^int T_App::start()$/;"	f	class:T_App	signature:()
+T_Program	program.h	/^class T_Program $/;"	c
+T_Program::main	program.cc	/^int T_Program::main(const std::vector<CL_String> &args)$/;"	f	class:T_Program	signature:(const std::vector<CL_String> &args)
+T_Program::main	program.h	/^	static int main(const std::vector<CL_String> &args);$/;"	p	class:T_Program	access:public	signature:(const std::vector<CL_String> &args)
+closeWindow	app.cc	/^void T_App::closeWindow()$/;"	f	class:T_App	signature:()
+closeWindow	app.h	/^	void closeWindow();$/;"	p	class:T_App	access:public	signature:()
+closeWindow	app.h	/^	void closeWindow();$/;"	p	class:T_App	signature:()
+closeWindow	start.cc	/^void T_App::closeWindow()$/;"	f	class:T_App	signature:()
+console	app.h	/^	CL_Console console;$/;"	m	class:T_App
+console	app.h	/^	CL_Console console;$/;"	m	class:T_App	access:private
+event	app.h	/^	void event();$/;"	p	class:T_App	access:public	signature:()
+event	app.h	/^	void event();$/;"	p	class:T_App	signature:()
+event	event.cc	/^void T_App::event()$/;"	f	class:T_App	signature:()
+init	app.h	/^	bool init();$/;"	p	class:T_App	access:public	signature:()
+init	app.h	/^	bool init();$/;"	p	class:T_App	signature:()
+init	init.cc	/^bool T_App::init()$/;"	f	class:T_App	signature:()
+loop	app.h	/^	void loop();$/;"	p	class:T_App	access:public	signature:()
+loop	app.h	/^	void loop();$/;"	p	class:T_App	signature:()
+loop	loop.cc	/^void T_App::loop()$/;"	f	class:T_App	signature:()
+mGui	app.h	/^	CL_GUIManager mGui;$/;"	m	class:T_App
+mGui	app.h	/^	CL_GUIManager mGui;$/;"	m	class:T_App	access:private
+mInput	app.h	/^	CL_InputContext mInput;$/;"	m	class:T_App
+mInput	app.h	/^	CL_InputContext mInput;$/;"	m	class:T_App	access:private
+mKeyboard	app.h	/^	CL_InputDevice mKeyboard;$/;"	m	class:T_App
+mKeyboard	app.h	/^	CL_InputDevice mKeyboard;$/;"	m	class:T_App	access:private
+mMouse	app.h	/^	CL_InputDevice mMouse;$/;"	m	class:T_App
+mMouse	app.h	/^	CL_InputDevice mMouse;$/;"	m	class:T_App	access:private
+mQuit	app.h	/^	bool mQuit;$/;"	m	class:T_App
+mQuit	app.h	/^	bool mQuit;$/;"	m	class:T_App	access:private
+mWinDesc	app.h	/^	CL_DisplayWindowDescription mWinDesc;$/;"	m	class:T_App
+mWinDesc	app.h	/^	CL_DisplayWindowDescription mWinDesc;$/;"	m	class:T_App	access:private
+main	program.cc	/^CL_ClanApplication app(&T_Program::main);$/;"	v
+main	program.cc	/^int T_Program::main(const std::vector<CL_String> &args)$/;"	f	class:T_Program	signature:(const std::vector<CL_String> &args)
+main	program.h	/^	static int main(const std::vector<CL_String> &args);$/;"	p	class:T_Program	access:public	signature:(const std::vector<CL_String> &args)
+main	program.h	/^	static int main(const std::vector<CL_String> &args);$/;"	p	class:T_Program	signature:(const std::vector<CL_String> &args)
+mpConsole	app.h	/^	CL_ConsoleWindow *mpConsole;$/;"	m	class:T_App
+mpConsole	app.h	/^	CL_ConsoleWindow *mpConsole;$/;"	m	class:T_App	access:private
+mpDisplayWindow	app.h	/^	CL_DisplayWindow *mpDisplayWindow;$/;"	m	class:T_App
+mpDisplayWindow	app.h	/^	CL_DisplayWindow *mpDisplayWindow;$/;"	m	class:T_App	access:private
+mpWinManager	app.h	/^	CL_GUIWindowManagerTexture *mpWinManager;$/;"	m	class:T_App
+mpWinManager	app.h	/^	CL_GUIWindowManagerTexture *mpWinManager;$/;"	m	class:T_App	access:private
+render	app.h	/^	void render();$/;"	p	class:T_App	access:public	signature:()
+render	app.h	/^	void render();$/;"	p	class:T_App	signature:()
+render	render.cc	/^void T_App::render()$/;"	f	class:T_App	signature:()
+slot	app.h	/^	CL_Slot slot;$/;"	m	class:T_App
+slot	app.h	/^	CL_Slot slot;$/;"	m	class:T_App	access:private
+start	app.cc	/^int T_App::start()$/;"	f	class:T_App	signature:()
+start	app.h	/^	int  start();$/;"	p	class:T_App	access:public	signature:()
+start	app.h	/^	int  start();$/;"	p	class:T_App	signature:()
+start	start.cc	/^int T_App::start()$/;"	f	class:T_App	signature:()

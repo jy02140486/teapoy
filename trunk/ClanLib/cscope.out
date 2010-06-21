@@ -1,0 +1,4061 @@
+cscope 15 $HOME/teapoy/ClanLib               0000029734
+	@app.cc
+
+1 
+	~"­p.h
+"
+
+3 
+	gT_Aµ
+::
+	$T_Aµ
+(è: 
+	$mQu™
+(
+çl£
+)
+
+6 
+	}
+}
+
+8 
+T_Aµ
+::
+	$¡¬t
+()
+
+10 ià(
+	`š™
+(è=ğ
+çl£
+)
+
+15 !
+mQu™
+)
+
+17 
+	`ev’t
+();
+
+18 
+	`loİ
+();
+
+19 
+	`»nd”
+();
+
+22 
+mpCÚsŞe
+->
+	`di¥Ïy_şo£_mes§ge
+();
+
+24 
+	}
+}
+
+26 
+	gT_Aµ
+::
+	$şo£Wšdow
+()
+
+28 
+mQu™
+ = 
+Œue
+;
+
+29 
+	}
+}
+
+	@app.h
+
+1 #iâdeà
+APP_H
+
+
+2 
+	#APP_H
+
+
+	)
+
+3 
+	~"´ecomp.h
+"
+
+5 şas 
+	cT_Aµ
+
+
+7 
+	mpublic
+:
+
+8 
+T_Aµ
+ ();
+
+9 
+¡¬t
+();
+
+12 
+boŞ
+ 
+š™
+();
+
+15 
+ev’t
+();
+
+18 
+loİ
+();
+
+21 
+»nd”
+();
+
+24 
+şo£Wšdow
+();
+
+26 
+	m´iv©e
+:
+
+27 
+CL_GUIMªag”
+ 
+mGui
+;
+
+28 
+CL_Di¥ÏyWšdow
+ *
+	mmpDi¥ÏyWšdow
+;
+
+29 
+CL_GUIWšdowMªag”Textu»
+ *
+	mmpWšMªag”
+;
+
+30 
+CL_Di¥ÏyWšdowDesütiÚ
+ 
+	mmWšDesc
+;
+
+33 
+CL_CÚsŞeWšdow
+ *
+	mmpCÚsŞe
+;
+
+36 
+CL_IÅutCÚ‹xt
+ 
+	mmIÅut
+;
+
+39 
+CL_IÅutDeviû
+ 
+	mmKeybßrd
+;
+
+42 
+CL_IÅutDeviû
+ 
+	mmMou£
+;
+
+47 
+boŞ
+ 
+	mmQu™
+;
+
+50 
+CL_CÚsŞe
+ 
+	mcÚsŞe
+;
+
+	@event.cc
+
+1 
+	~"­p.h
+"
+
+3 
+	gT_Aµ
+::
+	$ev’t
+()
+
+5 ià(
+mKeybßrd
+.
+	`g‘_keycode
+(
+CL_KEY_ESCAPE
+))
+
+7 
+mQu™
+ = 
+Œue
+;
+
+10 
+CL_K“pAlive
+::
+	`´oûss
+();
+
+11 
+	}
+}
+
+	@init.cc
+
+1 
+	~"­p.h
+"
+
+3 
+boŞ
+ 
+	gT_Aµ
+::
+	$š™
+()
+
+5 
+Œy
+
+
+8 
+mWšDesc
+.
+	`£t_t™Ë
+("Teapoy");
+
+9 
+mWšDesc
+.
+	`£t_®low_»size
+(
+Œue
+);
+
+10 
+mWšDesc
+.
+	`£t_size
+(
+	`CL_Size
+ (800, 600), 
+çl£
+);
+
+12 
+mpDi¥ÏyWšdow
+ = 
+Ãw
+ 
+	`CL_Di¥ÏyWšdow
+(
+mWšDesc
+);
+
+13 
+mpWšMªag”
+ = 
+Ãw
+ 
+	`CL_GUIWšdowMªag”Textu»
+(*
+mpDi¥ÏyWšdow
+);
+
+14 
+mGui
+.
+	`£t_wšdow_mªag”
+(*
+mpWšMªag”
+);
+
+17 
+¦Ù
+ = 
+mpDi¥ÏyWšdow
+->
+	`sig_wšdow_şo£
+().
+	`cÚÃù
+(
+this
+, &
+T_Aµ
+::
+şo£Wšdow
+);
+
+20 
+mpCÚsŞe
+ = 
+Ãw
+ 
+	`CL_CÚsŞeWšdow
+("Console", 80, 100);
+
+23 
+mIÅut
+ = 
+mpDi¥ÏyWšdow
+->
+	`g‘_ic
+();
+
+24 
+mKeybßrd
+ = 
+mIÅut
+.
+	`g‘_keybßrd
+();
+
+25 
+mMou£
+ = 
+mIÅut
+.
+	`g‘_mou£
+();
+
+27  
+Œue
+;
+
+29 
+	`ÿtch
+ (
+CL_Exû±iÚ
+ &
+exû±iÚ
+)
+
+31 
+CL_CÚsŞe
+::
+	`wr™e_lše
+("Exû±iÚ", 
+exû±iÚ
+.
+	`g‘_mes§ge_ªd_¡ack_Œaû
+());
+
+32 
+mpCÚsŞe
+->
+	`di¥Ïy_şo£_mes§ge
+();
+
+33  
+çl£
+;
+
+35 
+	}
+}
+
+	@loop.cc
+
+1 
+	~"­p.h
+"
+
+3 
+	gT_Aµ
+::
+	$loİ
+()
+
+5 
+	}
+}
+
+	@precomp.cc
+
+1 
+	~"´ecomp.h
+"
+
+	@precomp.h
+
+19 
+	~<CÏnLib/cÜe.h
+>
+
+20 
+	~<CÏnLib/di¥Ïy.h
+>
+
+21 
+	~<CÏnLib/gui.h
+>
+
+22 
+	~<CÏnLib/gl.h
+>
+
+	@program.cc
+
+1 
+	~<CÏnLib/­¶iÿtiÚ.h
+>
+
+3 
+	~"´og¿m.h
+"
+
+4 
+	~"­p.h
+"
+
+6 
+CL_CÏnAµliÿtiÚ
+ 
+­p
+(&
+T_Prog¿m
+::
+maš
+);
+
+15 
+	gT_Prog¿m
+::
+maš
+(cÚ¡ 
+¡d
+::
+veùÜ
+<
+CL_SŒšg
+> &
+¬gs
+)
+
+18 
+CL_S‘upCÜe
+ 
+£tup_cÜe
+;
+
+21 
+CL_S‘upDi¥Ïy
+ 
+	g£tup_di¥Ïy
+;
+
+24 
+CL_S‘upGUI
+ 
+	g£tup_gui
+;
+
+27 
+CL_S‘upGL
+ 
+	g£tup_gl
+;
+
+30 
+T_Aµ
+ 
+	g­p
+;
+
+31 
+	g»tv®
+ = 
+­p
+.
+¡¬t
+();
+
+33  
+	g»tv®
+;
+
+	@program.h
+
+1 #iâdeà
+PROGRAM_H
+
+
+2 
+	#PROGRAM_H
+
+
+	)
+
+3 
+	~"´ecomp.h
+"
+
+5 şas 
+	cT_Prog¿m
+
+
+7 
+	mpublic
+:
+
+8 
+maš
+(cÚ¡ 
+¡d
+::
+veùÜ
+<
+CL_SŒšg
+> &
+¬gs
+);
+
+	@render.cc
+
+1 
+	~"­p.h
+"
+
+3 
+	gT_Aµ
+::
+	$»nd”
+()
+
+5 
+mpDi¥ÏyWšdow
+->
+	`æ
+();
+
+6 
+mGui
+.
+	`exec
+(
+çl£
+);
+
+7 
+	}
+}
+
+	@/usr/include/ClanLib/application.h
+
+35 #´agm¨
+Úû
+
+
+37 #ifdeà
+__ılu¥lus_şi
+
+
+38 #´agm¨
+mªaged
+(
+push
+, 
+off
+)
+
+41 
+	~"Aµ/şª­p.h
+"
+
+43 #ifdeà
+__ılu¥lus_şi
+
+
+44 #´agm¨
+mªaged
+(
+pİ
+)
+
+47 #ià
+defšed
+ (
+_MSC_VER
+)
+
+48 #ià!
+defšed
+ (
+UNICODE
+)
+
+49 #ià
+defšed
+ (
+CL_DLL
+)
+
+50 #ià!
+defšed
+ (
+_DEBUG
+)
+
+51 #ià
+defšed
+(
+_M_X64
+)
+
+52 #´agm¨
+comm’t
+(
+lib
+, "clanApp-x64-dll.lib")
+
+54 #´agm¨
+comm’t
+(
+lib
+, "clanApp-dll.lib")
+
+57 #ià
+defšed
+(
+_M_X64
+)
+
+58 #´agm¨
+comm’t
+(
+lib
+, "clanApp-x64-dll-debug.lib")
+
+60 #´agm¨
+comm’t
+(
+lib
+, "clanApp-dll-debug.lib")
+
+63 #–ià
+defšed
+ (
+_DLL
+)
+
+64 #ià!
+defšed
+ (
+_DEBUG
+)
+
+65 #ià
+defšed
+(
+_M_X64
+)
+
+66 #´agm¨
+comm’t
+(
+lib
+, "clanApp-x64-static-mtdll.lib")
+
+68 #´agm¨
+comm’t
+(
+lib
+, "clanApp-static-mtdll.lib")
+
+71 #ià
+defšed
+(
+_M_X64
+)
+
+72 #´agm¨
+comm’t
+(
+lib
+, "clanApp-x64-static-mtdll-debug.lib")
+
+74 #´agm¨
+comm’t
+(
+lib
+, "clanApp-static-mtdll-debug.lib")
+
+78 #ià!
+defšed
+ (
+_DEBUG
+)
+
+79 #ià
+defšed
+(
+_M_X64
+)
+
+80 #´agm¨
+comm’t
+(
+lib
+, "clanApp-x64-static-mt.lib")
+
+82 #´agm¨
+comm’t
+(
+lib
+, "clanApp-static-mt.lib")
+
+85 #ià
+defšed
+(
+_M_X64
+)
+
+86 #´agm¨
+comm’t
+(
+lib
+, "clanApp-x64-static-mt-debug.lib")
+
+88 #´agm¨
+comm’t
+(
+lib
+, "clanApp-static-mt-debug.lib")
+
+93 #ià
+defšed
+ (
+CL_DLL
+)
+
+94 #ià!
+defšed
+ (
+_DEBUG
+)
+
+95 #ià
+defšed
+(
+_M_X64
+)
+
+96 #´agm¨
+comm’t
+(
+lib
+, "clanApp-x64-dll-uc.lib")
+
+98 #´agm¨
+comm’t
+(
+lib
+, "clanApp-dll-uc.lib")
+
+101 #ià
+defšed
+(
+_M_X64
+)
+
+102 #´agm¨
+comm’t
+(
+lib
+, "clanApp-x64-dll-uc-debug.lib")
+
+104 #´agm¨
+comm’t
+(
+lib
+, "clanApp-dll-uc-debug.lib")
+
+107 #–ià
+defšed
+ (
+_DLL
+)
+
+108 #ià!
+defšed
+ (
+_DEBUG
+)
+
+109 #ià
+defšed
+(
+_M_X64
+)
+
+110 #´agm¨
+comm’t
+(
+lib
+, "clanApp-x64-static-mtdll-uc.lib")
+
+112 #´agm¨
+comm’t
+(
+lib
+, "clanApp-static-mtdll-uc.lib")
+
+115 #ià
+defšed
+(
+_M_X64
+)
+
+116 #´agm¨
+comm’t
+(
+lib
+, "clanApp-x64-static-mtdll-uc-debug.lib")
+
+118 #´agm¨
+comm’t
+(
+lib
+, "clanApp-static-mtdll-uc-debug.lib")
+
+122 #ià!
+defšed
+ (
+_DEBUG
+)
+
+123 #ià
+defšed
+(
+_M_X64
+)
+
+124 #´agm¨
+comm’t
+(
+lib
+, "clanApp-x64-static-mt-uc.lib")
+
+126 #´agm¨
+comm’t
+(
+lib
+, "clanApp-static-mt-uc.lib")
+
+129 #ià
+defšed
+(
+_M_X64
+)
+
+130 #´agm¨
+comm’t
+(
+lib
+, "clanApp-x64-static-mt-uc-debug.lib")
+
+132 #´agm¨
+comm’t
+(
+lib
+, "clanApp-static-mt-uc-debug.lib")
+
+	@/usr/include/ClanLib/core.h
+
+34 #´agm¨
+Úû
+
+
+36 
+	#CL_VERSION
+(
+x
+,
+y
+,
+z
+èĞ(x << 16è| (y << 8è| (zè)
+
+	)
+
+37 
+	#CL_CURRENT_VERSION
+ 
+	`CL_VERSION
+(2,1,1)
+
+	)
+
+38 
+	#CL_VERSION_STRING
+ "2.1.1"
+
+	)
+
+40 #ifdeà
+_MSC_VER
+
+
+41 #´agm¨
+w¬nšg
+Ğ
+di§bË
+ : 4786)
+
+44 #ifdeà
+__BORLANDC__
+
+
+45 
+	#BORLAND
+
+
+	)
+
+48 #ifdeà
+__ılu¥lus_şi
+
+
+49 #´agm¨
+mªaged
+(
+push
+, 
+off
+)
+
+52 #ifdeà
+WIN32
+
+
+53 
+	~<wšdows.h
+>
+
+56 
+	~"CÜe/Text/¡ršg_ty³s.h
+"
+
+57 
+	~"CÜe/Text/fe_logg”.h
+"
+
+58 
+	~"CÜe/Text/cÚsŞe.h
+"
+
+59 
+	~"CÜe/Text/cÚsŞe_logg”.h
+"
+
+60 
+	~"CÜe/Text/logg”.h
+"
+
+61 
+	~"CÜe/Text/¡ršg_fÜm©.h
+"
+
+62 
+	~"CÜe/Text/¡ršg_h–p.h
+"
+
+63 
+	~"CÜe/Text/¡ršg_®loÿtÜ.h
+"
+
+64 
+	~"CÜe/Sy¡em/d©abufãr.h
+"
+
+65 
+	~"CÜe/Sy¡em/block_®loÿtÜ.h
+"
+
+66 
+	~"CÜe/Sy¡em/cÚsŞe_wšdow.h
+"
+
+67 
+	~"CÜe/Sy¡em/d©‘ime.h
+"
+
+68 
+	~"CÜe/Sy¡em/di¥o§bË_objeù.h
+"
+
+69 
+	~"CÜe/Sy¡em/ev’t.h
+"
+
+70 
+	~"CÜe/Sy¡em/ev’t_´ovid”.h
+"
+
+71 
+	~"CÜe/Sy¡em/exû±iÚ.h
+"
+
+72 
+	~"CÜe/Sy¡em/mu‹x.h
+"
+
+73 
+	~"CÜe/Sy¡em/ruÂabË.h
+"
+
+74 
+	~"CÜe/Sy¡em/£rviû.h
+"
+
+75 
+	~"CÜe/Sy¡em/£tup_cÜe.h
+"
+
+76 
+	~"CÜe/Sy¡em/th»ad.h
+"
+
+77 
+	~"CÜe/Sy¡em/th»ad_loÿl_¡Üage.h
+"
+
+78 
+	~"CÜe/Sy¡em/autİŒ.h
+"
+
+79 
+	~"CÜe/Sy¡em/w—k±r.h
+"
+
+80 
+	~"CÜe/Sy¡em/sh¬ed±r.h
+"
+
+81 
+	~"CÜe/Sy¡em/sy¡em.h
+"
+
+82 
+	~"CÜe/Sy¡em/commªd_lše.h
+"
+
+83 
+	~"CÜe/Sy¡em/memÜy_poŞ.h
+"
+
+84 
+	~"CÜe/Sy¡em/¡©ic_memÜy_poŞ.h
+"
+
+85 
+	~"CÜe/Sy¡em/fixed_memÜy_poŞ.h
+"
+
+86 
+	~"CÜe/Sy¡em/k“p_®ive.h
+"
+
+87 
+	~"CÜe/Sy¡em/tim”.h
+"
+
+88 
+	~"CÜe/Sy¡em/»gi¡ry_key.h
+"
+
+89 
+	~"CÜe/Sy¡em/š‹¾ocked_v¬ŸbË.h
+"
+
+90 
+	~"CÜe/SigÇls/ÿÎback_0.h
+"
+
+91 
+	~"CÜe/SigÇls/ÿÎback_1.h
+"
+
+92 
+	~"CÜe/SigÇls/ÿÎback_2.h
+"
+
+93 
+	~"CÜe/SigÇls/ÿÎback_3.h
+"
+
+94 
+	~"CÜe/SigÇls/ÿÎback_4.h
+"
+
+95 
+	~"CÜe/SigÇls/ÿÎback_5.h
+"
+
+96 
+	~"CÜe/SigÇls/ÿÎback_v0.h
+"
+
+97 
+	~"CÜe/SigÇls/ÿÎback_v1.h
+"
+
+98 
+	~"CÜe/SigÇls/ÿÎback_v2.h
+"
+
+99 
+	~"CÜe/SigÇls/ÿÎback_v3.h
+"
+
+100 
+	~"CÜe/SigÇls/ÿÎback_v4.h
+"
+
+101 
+	~"CÜe/SigÇls/ÿÎback_v5.h
+"
+
+102 
+	~"CÜe/SigÇls/sigÇl_v0.h
+"
+
+103 
+	~"CÜe/SigÇls/sigÇl_v1.h
+"
+
+104 
+	~"CÜe/SigÇls/sigÇl_v2.h
+"
+
+105 
+	~"CÜe/SigÇls/sigÇl_v3.h
+"
+
+106 
+	~"CÜe/SigÇls/sigÇl_v4.h
+"
+
+107 
+	~"CÜe/SigÇls/sigÇl_v5.h
+"
+
+108 
+	~"CÜe/SigÇls/vœtu®_funùiÚ_0.h
+"
+
+109 
+	~"CÜe/SigÇls/vœtu®_funùiÚ_1.h
+"
+
+110 
+	~"CÜe/SigÇls/vœtu®_funùiÚ_2.h
+"
+
+111 
+	~"CÜe/SigÇls/vœtu®_funùiÚ_3.h
+"
+
+112 
+	~"CÜe/SigÇls/vœtu®_funùiÚ_4.h
+"
+
+113 
+	~"CÜe/SigÇls/vœtu®_funùiÚ_5.h
+"
+
+114 
+	~"CÜe/SigÇls/¦Ù.h
+"
+
+115 
+	~"CÜe/SigÇls/¦Ù_cÚš”.h
+"
+
+116 
+	~"CÜe/Resourûs/»sourû.h
+"
+
+117 
+	~"CÜe/Resourûs/»sourû_mªag”.h
+"
+
+118 
+	~"CÜe/Resourûs/»sourû_d©a_£ssiÚ.h
+"
+
+119 
+	~"CÜe/XML/dom_´oûssšg_š¡ruùiÚ.h
+"
+
+120 
+	~"CÜe/XML/dom_’t™y_»ã»nû.h
+"
+
+121 
+	~"CÜe/XML/dom_nÙ©iÚ.h
+"
+
+122 
+	~"CÜe/XML/dom_exû±iÚ.h
+"
+
+123 
+	~"CÜe/XML/dom_cd©a_£ùiÚ.h
+"
+
+124 
+	~"CÜe/XML/dom_docum’t_äagm’t.h
+"
+
+125 
+	~"CÜe/XML/dom_comm’t.h
+"
+
+126 
+	~"CÜe/XML/dom_©Œ.h
+"
+
+127 
+	~"CÜe/XML/dom_’t™y.h
+"
+
+128 
+	~"CÜe/XML/dom_docum’t_ty³.h
+"
+
+129 
+	~"CÜe/XML/dom_docum’t.h
+"
+
+130 
+	~"CÜe/XML/dom_im¶em’tiÚ.h
+"
+
+131 
+	~"CÜe/XML/dom_node_li¡.h
+"
+
+132 
+	~"CÜe/XML/dom_‹xt.h
+"
+
+133 
+	~"CÜe/XML/dom_node.h
+"
+
+134 
+	~"CÜe/XML/dom_ch¬aù”_d©a.h
+"
+
+135 
+	~"CÜe/XML/dom_Çmed_node_m­.h
+"
+
+136 
+	~"CÜe/XML/dom_–em’t.h
+"
+
+137 
+	~"CÜe/XML/dom_¡ršg.h
+"
+
+138 
+	~"CÜe/XML/xml_tok’iz”.h
+"
+
+139 
+	~"CÜe/XML/xml_wr™”.h
+"
+
+140 
+	~"CÜe/XML/xml_tok’.h
+"
+
+141 
+	~"CÜe/XML/x·th_ev®u©Ü.h
+"
+
+142 
+	~"CÜe/XML/x·th_objeù.h
+"
+
+143 
+	~"CÜe/CSS/css_docum’t.h
+"
+
+144 
+	~"CÜe/CSS/css_impÜt.h
+"
+
+145 
+	~"CÜe/CSS/css_´İ”ty.h
+"
+
+146 
+	~"CÜe/CSS/css_ruË£t.h
+"
+
+147 
+	~"CÜe/CSS/css_£ËùÜ.h
+"
+
+148 
+	~"CÜe/IOD©a/acûss_cÚŒŞ_li¡.h
+"
+
+149 
+	~"CÜe/IOD©a/fe.h
+"
+
+150 
+	~"CÜe/IOD©a/fe_h–p.h
+"
+
+151 
+	~"CÜe/IOD©a/·th_h–p.h
+"
+
+152 
+	~"CÜe/IOD©a/iodeviû.h
+"
+
+153 
+	~"CÜe/IOD©a/pe_cÚÃùiÚ.h
+"
+
+154 
+	~"CÜe/IOD©a/pe_li¡’.h
+"
+
+155 
+	~"CÜe/IOD©a/£cur™y_desütÜ.h
+"
+
+156 
+	~"CÜe/IOD©a/d©©y³s.h
+"
+
+157 
+	~"CÜe/IOD©a/dœeùÜy.h
+"
+
+158 
+	~"CÜe/IOD©a/£cur™y_id’tif›r.h
+"
+
+159 
+	~"CÜe/IOD©a/ş_’dŸn.h
+"
+
+160 
+	~"CÜe/IOD©a/dœeùÜy_sÿÂ”.h
+"
+
+161 
+	~"CÜe/IOD©a/vœtu®_dœeùÜy.h
+"
+
+162 
+	~"CÜe/IOD©a/vœtu®_fe_sy¡em.h
+"
+
+163 
+	~"CÜe/IOD©a/vœtu®_fe_sourû.h
+"
+
+164 
+	~"CÜe/IOD©a/iodeviû_memÜy.h
+"
+
+165 
+	~"CÜe/IOD©a/vœtu®_dœeùÜy_li¡šg.h
+"
+
+166 
+	~"CÜe/Z/z_¬chive.h
+"
+
+167 
+	~"CÜe/Z/z_wr™”.h
+"
+
+168 
+	~"CÜe/Z/z_»ad”.h
+"
+
+169 
+	~"CÜe/Z/z_fe_’Œy.h
+"
+
+170 
+	~"CÜe/M©h/ªgË.h
+"
+
+171 
+	~"CÜe/M©h/ba£64_’cod”.h
+"
+
+172 
+	~"CÜe/M©h/ba£64_decod”.h
+"
+
+173 
+	~"CÜe/M©h/bez›r_curve.h
+"
+
+174 
+	~"CÜe/M©h/cœşe.h
+"
+
+175 
+	~"CÜe/M©h/vec1.h
+"
+
+176 
+	~"CÜe/M©h/vec2.h
+"
+
+177 
+	~"CÜe/M©h/vec3.h
+"
+
+178 
+	~"CÜe/M©h/vec4.h
+"
+
+179 
+	~"CÜe/M©h/d–auÃy_ŒŸnguÏtÜ.h
+"
+
+180 
+	~"CÜe/M©h/—r_ş_ŒŸnguÏtÜ.h
+"
+
+181 
+	~"CÜe/M©h/—r_ş_»suÉ.h
+"
+
+182 
+	~"CÜe/M©h/lše_m©h.h
+"
+
+183 
+	~"CÜe/M©h/ş_m©h.h
+"
+
+184 
+	~"CÜe/M©h/m©2.h
+"
+
+185 
+	~"CÜe/M©h/m©3.h
+"
+
+186 
+	~"CÜe/M©h/m©4.h
+"
+
+187 
+	~"CÜe/M©h/Üigš.h
+"
+
+188 
+	~"CÜe/M©h/ouše_ŒŸnguÏtÜ.h
+"
+
+189 
+	~"CÜe/M©h/pošt.h
+"
+
+190 
+	~"CÜe/M©h/pošt£t_m©h.h
+"
+
+191 
+	~"CÜe/M©h/quad.h
+"
+
+192 
+	~"CÜe/M©h/»ù.h
+"
+
+193 
+	~"CÜe/M©h/»ù_·ck”.h
+"
+
+194 
+	~"CÜe/M©h/sha1.h
+"
+
+195 
+	~"CÜe/M©h/size.h
+"
+
+196 
+	~"CÜe/M©h/ŒŸngË_m©h.h
+"
+
+197 
+	~"CÜe/M©h/lše.h
+"
+
+198 
+	~"CÜe/M©h/lše_¿y.h
+"
+
+199 
+	~"CÜe/M©h/lše_£gm’t.h
+"
+
+200 
+	~"CÜe/cÜe_io¡»am.h
+"
+
+202 #ifdeà
+__ılu¥lus_şi
+
+
+203 #´agm¨
+mªaged
+(
+pİ
+)
+
+206 #ià
+defšed
+ (
+_MSC_VER
+)
+
+207 #ià!
+defšed
+ (
+_MT
+)
+
+208 #”rÜ 
+Your
+ 
+­¶iÿtiÚ
+ 
+is
+ 
+£t
+ 
+to
+ 
+lšk
+ 
+w™h
+ 
+the
+ 
+sšgË
+ 
+th»aded
+ 
+v”siÚ
+ 
+of
+h
+run
+-
+time
+ 
+lib¿ry
+. 
+Go
+Ø
+´ojeù
+ 
+£‰šgs
+, 
+š
+h
+C
+++ 
+£ùiÚ
+, 
+ªd
+ 
+chªge
+ 
+™
+ 
+äom
+ sšgËh»adedØ
+muÉi
+hreaded.
+
+210 #ià!
+defšed
+ (
+UNICODE
+)
+
+211 #ià
+defšed
+ (
+CL_DLL
+)
+
+212 #ià!
+defšed
+ (
+_DEBUG
+)
+
+213 #ià
+defšed
+(
+_M_X64
+)
+
+214 #´agm¨
+comm’t
+(
+lib
+, "clanCore-x64-dll.lib")
+
+216 #´agm¨
+comm’t
+(
+lib
+, "clanCore-dll.lib")
+
+219 #ià
+defšed
+(
+_M_X64
+)
+
+220 #´agm¨
+comm’t
+(
+lib
+, "clanCore-x64-dll-debug.lib")
+
+222 #´agm¨
+comm’t
+(
+lib
+, "clanCore-dll-debug.lib")
+
+225 #–ià
+defšed
+ (
+_DLL
+)
+
+226 #ià!
+defšed
+ (
+_DEBUG
+)
+
+227 #ià
+defšed
+(
+_M_X64
+)
+
+228 #´agm¨
+comm’t
+(
+lib
+, "clanCore-x64-static-mtdll.lib")
+
+229 #´agm¨
+comm’t
+(
+lib
+, "zlib-x64-static-mtdll.lib")
+
+231 #´agm¨
+comm’t
+(
+lib
+, "clanCore-static-mtdll.lib")
+
+232 #´agm¨
+comm’t
+(
+lib
+, "zlib-static-mtdll.lib")
+
+235 #ià
+defšed
+(
+_M_X64
+)
+
+236 #´agm¨
+comm’t
+(
+lib
+, "clanCore-x64-static-mtdll-debug.lib")
+
+237 #´agm¨
+comm’t
+(
+lib
+, "zlib-x64-static-mtdll-debug.lib")
+
+239 #´agm¨
+comm’t
+(
+lib
+, "clanCore-static-mtdll-debug.lib")
+
+240 #´agm¨
+comm’t
+(
+lib
+, "zlib-static-mtdll-debug.lib")
+
+244 #ià!
+defšed
+ (
+_DEBUG
+)
+
+245 #ià
+defšed
+(
+_M_X64
+)
+
+246 #´agm¨
+comm’t
+(
+lib
+, "clanCore-x64-static-mt.lib")
+
+247 #´agm¨
+comm’t
+(
+lib
+, "zlib-x64-static-mt.lib")
+
+249 #´agm¨
+comm’t
+(
+lib
+, "clanCore-static-mt.lib")
+
+250 #´agm¨
+comm’t
+(
+lib
+, "zlib-static-mt.lib")
+
+253 #ià
+defšed
+(
+_M_X64
+)
+
+254 #´agm¨
+comm’t
+(
+lib
+, "clanCore-x64-static-mt-debug.lib")
+
+255 #´agm¨
+comm’t
+(
+lib
+, "zlib-x64-static-mt-debug.lib")
+
+257 #´agm¨
+comm’t
+(
+lib
+, "clanCore-static-mt-debug.lib")
+
+258 #´agm¨
+comm’t
+(
+lib
+, "zlib-static-mt-debug.lib")
+
+263 #ià
+defšed
+ (
+CL_DLL
+)
+
+264 #ià!
+defšed
+ (
+_DEBUG
+)
+
+265 #ià
+defšed
+(
+_M_X64
+)
+
+266 #´agm¨
+comm’t
+(
+lib
+, "clanCore-x64-dll-uc.lib")
+
+268 #´agm¨
+comm’t
+(
+lib
+, "clanCore-dll-uc.lib")
+
+271 #ià
+defšed
+(
+_M_X64
+)
+
+272 #´agm¨
+comm’t
+(
+lib
+, "clanCore-x64-dll-uc-debug.lib")
+
+274 #´agm¨
+comm’t
+(
+lib
+, "clanCore-dll-uc-debug.lib")
+
+277 #–ià
+defšed
+ (
+_DLL
+)
+
+278 #ià!
+defšed
+ (
+_DEBUG
+)
+
+279 #ià
+defšed
+(
+_M_X64
+)
+
+280 #´agm¨
+comm’t
+(
+lib
+, "clanCore-x64-static-mtdll-uc.lib")
+
+281 #´agm¨
+comm’t
+(
+lib
+, "zlib-x64-static-mtdll.lib")
+
+283 #´agm¨
+comm’t
+(
+lib
+, "clanCore-static-mtdll-uc.lib")
+
+284 #´agm¨
+comm’t
+(
+lib
+, "zlib-static-mtdll.lib")
+
+287 #ià
+defšed
+(
+_M_X64
+)
+
+288 #´agm¨
+comm’t
+(
+lib
+, "clanCore-x64-static-mtdll-uc-debug.lib")
+
+289 #´agm¨
+comm’t
+(
+lib
+, "zlib-x64-static-mtdll-debug.lib")
+
+291 #´agm¨
+comm’t
+(
+lib
+, "clanCore-static-mtdll-uc-debug.lib")
+
+292 #´agm¨
+comm’t
+(
+lib
+, "zlib-static-mtdll-debug.lib")
+
+296 #ià!
+defšed
+ (
+_DEBUG
+)
+
+297 #ià
+defšed
+(
+_M_X64
+)
+
+298 #´agm¨
+comm’t
+(
+lib
+, "clanCore-x64-static-mt-uc.lib")
+
+299 #´agm¨
+comm’t
+(
+lib
+, "zlib-x64-static-mt.lib")
+
+301 #´agm¨
+comm’t
+(
+lib
+, "clanCore-static-mt-uc.lib")
+
+302 #´agm¨
+comm’t
+(
+lib
+, "zlib-static-mt.lib")
+
+305 #ià
+defšed
+(
+_M_X64
+)
+
+306 #´agm¨
+comm’t
+(
+lib
+, "clanCore-x64-static-mt-uc-debug.lib")
+
+307 #´agm¨
+comm’t
+(
+lib
+, "zlib-x64-static-mt-debug.lib")
+
+309 #´agm¨
+comm’t
+(
+lib
+, "clanCore-static-mt-uc-debug.lib")
+
+310 #´agm¨
+comm’t
+(
+lib
+, "zlib-static-mt-debug.lib")
+
+	@/usr/include/ClanLib/display.h
+
+34 #´agm¨
+Úû
+
+
+36 #ifdeà
+__ılu¥lus_şi
+
+
+37 #´agm¨
+mªaged
+(
+push
+, 
+off
+)
+
+40 
+	~"Di¥Ïy/di¥Ïy.h
+"
+
+41 
+	~"Di¥Ïy/di¥Ïy_rg‘.h
+"
+
+42 
+	~"Di¥Ïy/£tup_di¥Ïy.h
+"
+
+43 
+	~"Di¥Ïy/sü“n_šfo.h
+"
+
+44 
+	~"Di¥Ïy/2D/cŞÜ.h
+"
+
+45 
+	~"Di¥Ïy/2D/cŞÜ_hsv.h
+"
+
+46 
+	~"Di¥Ïy/2D/cŞÜ_hsv2.h
+"
+
+47 
+	~"Di¥Ïy/2D/cŞÜ_h¦.h
+"
+
+48 
+	~"Di¥Ïy/2D/cŞÜ_h¦2.h
+"
+
+49 
+	~"Di¥Ïy/2D/d¿w.h
+"
+
+50 
+	~"Di¥Ïy/2D/g¿d›Á.h
+"
+
+51 
+	~"Di¥Ïy/2D/image.h
+"
+
+52 
+	~"Di¥Ïy/2D/rounded_»ù.h
+"
+
+53 
+	~"Di¥Ïy/2D/¥r™e.h
+"
+
+54 
+	~"Di¥Ïy/2D/¥r™e_desütiÚ.h
+"
+
+55 
+	~"Di¥Ïy/2D/sub‹xtu».h
+"
+
+56 
+	~"Di¥Ïy/2D/‹xtu»_group.h
+"
+
+57 
+	~"Di¥Ïy/2D/¥ª_Ïyout.h
+"
+
+58 
+	~"Di¥Ïy/CŞlisiÚ/cŞlisiÚ_ouše.h
+"
+
+59 
+	~"Di¥Ïy/CŞlisiÚ/cÚtour.h
+"
+
+60 
+	~"Di¥Ïy/CŞlisiÚ/ouše_accu¿cy.h
+"
+
+61 
+	~"Di¥Ïy/CŞlisiÚ/ouše_cœşe.h
+"
+
+62 
+	~"Di¥Ïy/CŞlisiÚ/ouše_m©h.h
+"
+
+63 
+	~"Di¥Ïy/CŞlisiÚ/ouše_´ovid”.h
+"
+
+64 
+	~"Di¥Ïy/CŞlisiÚ/ouše_´ovid”_b™m­.h
+"
+
+65 
+	~"Di¥Ïy/CŞlisiÚ/ouše_´ovid”_fe.h
+"
+
+66 
+	~"Di¥Ïy/FÚt/fÚt.h
+"
+
+67 
+	~"Di¥Ïy/FÚt/fÚt_desütiÚ.h
+"
+
+68 
+	~"Di¥Ïy/FÚt/fÚt_sy¡em.h
+"
+
+69 
+	~"Di¥Ïy/FÚt/fÚt_¥r™e.h
+"
+
+70 
+	~"Di¥Ïy/FÚt/fÚt_m‘rics.h
+"
+
+71 
+	~"Di¥Ïy/FÚt/fÚt_ä“ty³.h
+"
+
+72 
+	~"Di¥Ïy/FÚt/fÚt_veùÜ.h
+"
+
+73 
+	~"Di¥Ïy/Image/·Ë‰e.h
+"
+
+74 
+	~"Di¥Ïy/Image/pix–_bufãr.h
+"
+
+75 
+	~"Di¥Ïy/Image/pix–_bufãr_h–p.h
+"
+
+76 
+	~"Di¥Ïy/Image/pix–_fÜm©.h
+"
+
+77 
+	~"Di¥Ïy/Image/pix–_fÜm©_ty³.h
+"
+
+78 
+	~"Di¥Ïy/Image/icÚ_£t.h
+"
+
+79 
+	~"Di¥Ïy/ImageProvid”s/j³g_com´essÜ.h
+"
+
+80 
+	~"Di¥Ïy/ImageProvid”s/j³g_decom´essÜ.h
+"
+
+81 
+	~"Di¥Ïy/ImageProvid”s/j³g_´ovid”.h
+"
+
+82 
+	~"Di¥Ïy/ImageProvid”s/pcx_´ovid”.h
+"
+
+83 
+	~"Di¥Ïy/ImageProvid”s/²g_´ovid”.h
+"
+
+84 
+	~"Di¥Ïy/ImageProvid”s/´ovid”_çùÜy.h
+"
+
+85 
+	~"Di¥Ïy/ImageProvid”s/´ovid”_ty³.h
+"
+
+86 
+	~"Di¥Ïy/ImageProvid”s/´ovid”_ty³_»gi¡”.h
+"
+
+87 
+	~"Di¥Ïy/ImageProvid”s/rga_´ovid”.h
+"
+
+88 
+	~"Di¥Ïy/R’d”/bËnd_mode.h
+"
+
+89 
+	~"Di¥Ïy/R’d”/bufãr_cÚŒŞ.h
+"
+
+90 
+	~"Di¥Ïy/R’d”/com·»_funùiÚ.h
+"
+
+91 
+	~"Di¥Ïy/R’d”/–em’t_¬¿y_bufãr.h
+"
+
+92 
+	~"Di¥Ïy/R’d”/äame_bufãr.h
+"
+
+93 
+	~"Di¥Ïy/R’d”/g¿phic_cÚ‹xt.h
+"
+
+94 
+	~"Di¥Ïy/R’d”/ocşusiÚ_qu”y.h
+"
+
+95 
+	~"Di¥Ïy/R’d”/³n.h
+"
+
+96 
+	~"Di¥Ïy/R’d”/pŞygÚ_¿¡”iz”.h
+"
+
+97 
+	~"Di¥Ïy/R’d”/´im™ives_¬¿y.h
+"
+
+98 
+	~"Di¥Ïy/R’d”/´im™ives_¬¿y_bud”.h
+"
+
+99 
+	~"Di¥Ïy/R’d”/´og¿m_©Œibu‹.h
+"
+
+100 
+	~"Di¥Ïy/R’d”/´og¿m_objeù.h
+"
+
+101 
+	~"Di¥Ïy/R’d”/´og¿m_unifÜm.h
+"
+
+102 
+	~"Di¥Ïy/R’d”/»nd”_b©ch”.h
+"
+
+103 
+	~"Di¥Ïy/R’d”/»nd”_bufãr.h
+"
+
+104 
+	~"Di¥Ïy/R’d”/shad”_objeù.h
+"
+
+105 
+	~"Di¥Ïy/R’d”/sh¬ed_gc_d©a.h
+"
+
+106 
+	~"Di¥Ïy/R’d”/‹xtu».h
+"
+
+107 
+	~"Di¥Ïy/R’d”/v”‹x_¬¿y_bufãr.h
+"
+
+108 
+	~"Di¥Ïy/T¬g‘Provid”s/cursÜ_´ovid”.h
+"
+
+109 
+	~"Di¥Ïy/T¬g‘Provid”s/di¥Ïy_rg‘_´ovid”.h
+"
+
+110 
+	~"Di¥Ïy/T¬g‘Provid”s/di¥Ïy_wšdow_´ovid”.h
+"
+
+111 
+	~"Di¥Ïy/T¬g‘Provid”s/–em’t_¬¿y_bufãr_´ovid”.h
+"
+
+112 
+	~"Di¥Ïy/T¬g‘Provid”s/fÚt_´ovid”.h
+"
+
+113 
+	~"Di¥Ïy/T¬g‘Provid”s/äame_bufãr_´ovid”.h
+"
+
+114 
+	~"Di¥Ïy/T¬g‘Provid”s/g¿phic_cÚ‹xt_´ovid”.h
+"
+
+115 
+	~"Di¥Ïy/T¬g‘Provid”s/šput_deviû_´ovid”.h
+"
+
+116 
+	~"Di¥Ïy/T¬g‘Provid”s/ocşusiÚ_qu”y_´ovid”.h
+"
+
+117 
+	~"Di¥Ïy/T¬g‘Provid”s/´og¿m_objeù_´ovid”.h
+"
+
+118 
+	~"Di¥Ïy/T¬g‘Provid”s/»nd”_bufãr_´ovid”.h
+"
+
+119 
+	~"Di¥Ïy/T¬g‘Provid”s/»nd”_wšdow_´ovid”.h
+"
+
+120 
+	~"Di¥Ïy/T¬g‘Provid”s/shad”_objeù_´ovid”.h
+"
+
+121 
+	~"Di¥Ïy/T¬g‘Provid”s/‹xtu»_´ovid”.h
+"
+
+122 
+	~"Di¥Ïy/T¬g‘Provid”s/v”‹x_¬¿y_bufãr_´ovid”.h
+"
+
+123 
+	~"Di¥Ïy/Wšdow/cursÜ.h
+"
+
+124 
+	~"Di¥Ïy/Wšdow/di¥Ïy_wšdow.h
+"
+
+125 
+	~"Di¥Ïy/Wšdow/di¥Ïy_wšdow_desütiÚ.h
+"
+
+126 
+	~"Di¥Ïy/Wšdow/di¥Ïy_wšdow_mode.h
+"
+
+127 
+	~"Di¥Ïy/Wšdow/šput_cÚ‹xt.h
+"
+
+128 
+	~"Di¥Ïy/Wšdow/šput_deviû.h
+"
+
+129 
+	~"Di¥Ïy/Wšdow/šput_ev’t.h
+"
+
+130 
+	~"Di¥Ïy/Wšdow/šput_¡©e.h
+"
+
+131 
+	~"Di¥Ïy/Wšdow/keys.h
+"
+
+133 #ifdeà
+__ılu¥lus_şi
+
+
+134 #´agm¨
+mªaged
+(
+pİ
+)
+
+137 #ià
+defšed
+ (
+_MSC_VER
+)
+
+138 #ià!
+defšed
+ (
+UNICODE
+)
+
+139 #ià
+defšed
+ (
+CL_DLL
+)
+
+140 #ià!
+defšed
+ (
+_DEBUG
+)
+
+141 #ià
+defšed
+(
+_M_X64
+)
+
+142 #´agm¨
+comm’t
+(
+lib
+, "clanDisplay-x64-dll.lib")
+
+144 #´agm¨
+comm’t
+(
+lib
+, "clanDisplay-dll.lib")
+
+147 #ià
+defšed
+(
+_M_X64
+)
+
+148 #´agm¨
+comm’t
+(
+lib
+, "clanDisplay-x64-dll-debug.lib")
+
+150 #´agm¨
+comm’t
+(
+lib
+, "clanDisplay-dll-debug.lib")
+
+153 #–ià
+defšed
+ (
+_DLL
+)
+
+154 #ià!
+defšed
+ (
+_DEBUG
+)
+
+155 #ià
+defšed
+(
+_M_X64
+)
+
+156 #´agm¨
+comm’t
+(
+lib
+, "clanDisplay-x64-static-mtdll.lib")
+
+157 #´agm¨
+comm’t
+(
+lib
+, "libjpeg-x64-static-mtdll.lib")
+
+158 #´agm¨
+comm’t
+(
+lib
+, "libpng-x64-static-mtdll.lib")
+
+159 #´agm¨
+comm’t
+(
+lib
+, "freetype-x64-static-mtdll.lib")
+
+161 #´agm¨
+comm’t
+(
+lib
+, "clanDisplay-static-mtdll.lib")
+
+162 #´agm¨
+comm’t
+(
+lib
+, "libjpeg-static-mtdll.lib")
+
+163 #´agm¨
+comm’t
+(
+lib
+, "libpng-static-mtdll.lib")
+
+164 #´agm¨
+comm’t
+(
+lib
+, "freetype-static-mtdll.lib")
+
+167 #ià
+defšed
+(
+_M_X64
+)
+
+168 #´agm¨
+comm’t
+(
+lib
+, "clanDisplay-x64-static-mtdll-debug.lib")
+
+169 #´agm¨
+comm’t
+(
+lib
+, "libjpeg-x64-static-mtdll-debug.lib")
+
+170 #´agm¨
+comm’t
+(
+lib
+, "libpng-x64-static-mtdll-debug.lib")
+
+171 #´agm¨
+comm’t
+(
+lib
+, "freetype-x64-static-mtdll-debug.lib")
+
+173 #´agm¨
+comm’t
+(
+lib
+, "clanDisplay-static-mtdll-debug.lib")
+
+174 #´agm¨
+comm’t
+(
+lib
+, "libjpeg-static-mtdll-debug.lib")
+
+175 #´agm¨
+comm’t
+(
+lib
+, "libpng-static-mtdll-debug.lib")
+
+176 #´agm¨
+comm’t
+(
+lib
+, "freetype-static-mtdll-debug.lib")
+
+179 #´agm¨
+comm’t
+(
+lib
+, "winmm.lib")
+
+180 #´agm¨
+comm’t
+(
+lib
+, "dinput8.lib")
+
+181 #´agm¨
+comm’t
+(
+lib
+, "dxguid.lib")
+
+183 #ià!
+defšed
+ (
+_DEBUG
+)
+
+184 #ià
+defšed
+(
+_M_X64
+)
+
+185 #´agm¨
+comm’t
+(
+lib
+, "clanDisplay-x64-static-mt.lib")
+
+186 #´agm¨
+comm’t
+(
+lib
+, "libjpeg-x64-static-mt.lib")
+
+187 #´agm¨
+comm’t
+(
+lib
+, "libpng-x64-static-mt.lib")
+
+188 #´agm¨
+comm’t
+(
+lib
+, "freetype-x64-static-mt.lib")
+
+190 #´agm¨
+comm’t
+(
+lib
+, "clanDisplay-static-mt.lib")
+
+191 #´agm¨
+comm’t
+(
+lib
+, "libjpeg-static-mt.lib")
+
+192 #´agm¨
+comm’t
+(
+lib
+, "libpng-static-mt.lib")
+
+193 #´agm¨
+comm’t
+(
+lib
+, "freetype-static-mt.lib")
+
+196 #ià
+defšed
+(
+_M_X64
+)
+
+197 #´agm¨
+comm’t
+(
+lib
+, "clanDisplay-x64-static-mt-debug.lib")
+
+198 #´agm¨
+comm’t
+(
+lib
+, "libjpeg-x64-static-mt-debug.lib")
+
+199 #´agm¨
+comm’t
+(
+lib
+, "libpng-x64-static-mt-debug.lib")
+
+200 #´agm¨
+comm’t
+(
+lib
+, "freetype-x64-static-mt-debug.lib")
+
+202 #´agm¨
+comm’t
+(
+lib
+, "clanDisplay-static-mt-debug.lib")
+
+203 #´agm¨
+comm’t
+(
+lib
+, "libjpeg-static-mt-debug.lib")
+
+204 #´agm¨
+comm’t
+(
+lib
+, "libpng-static-mt-debug.lib")
+
+205 #´agm¨
+comm’t
+(
+lib
+, "freetype-static-mt-debug.lib")
+
+208 #´agm¨
+comm’t
+(
+lib
+, "winmm.lib")
+
+209 #´agm¨
+comm’t
+(
+lib
+, "dinput8.lib")
+
+210 #´agm¨
+comm’t
+(
+lib
+, "dxguid.lib")
+
+213 #ià
+defšed
+ (
+CL_DLL
+)
+
+214 #ià!
+defšed
+ (
+_DEBUG
+)
+
+215 #ià
+defšed
+(
+_M_X64
+)
+
+216 #´agm¨
+comm’t
+(
+lib
+, "clanDisplay-x64-dll-uc.lib")
+
+218 #´agm¨
+comm’t
+(
+lib
+, "clanDisplay-dll-uc.lib")
+
+221 #ià
+defšed
+(
+_M_X64
+)
+
+222 #´agm¨
+comm’t
+(
+lib
+, "clanDisplay-x64-dll-uc-debug.lib")
+
+224 #´agm¨
+comm’t
+(
+lib
+, "clanDisplay-dll-uc-debug.lib")
+
+227 #–ià
+defšed
+ (
+_DLL
+)
+
+228 #ià!
+defšed
+ (
+_DEBUG
+)
+
+229 #ià
+defšed
+(
+_M_X64
+)
+
+230 #´agm¨
+comm’t
+(
+lib
+, "clanDisplay-x64-static-mtdll-uc.lib")
+
+231 #´agm¨
+comm’t
+(
+lib
+, "libjpeg-x64-static-mtdll.lib")
+
+232 #´agm¨
+comm’t
+(
+lib
+, "libpng-x64-static-mtdll.lib")
+
+233 #´agm¨
+comm’t
+(
+lib
+, "freetype-x64-static-mtdll.lib")
+
+235 #´agm¨
+comm’t
+(
+lib
+, "clanDisplay-static-mtdll-uc.lib")
+
+236 #´agm¨
+comm’t
+(
+lib
+, "libjpeg-static-mtdll.lib")
+
+237 #´agm¨
+comm’t
+(
+lib
+, "libpng-static-mtdll.lib")
+
+238 #´agm¨
+comm’t
+(
+lib
+, "freetype-static-mtdll.lib")
+
+241 #ià
+defšed
+(
+_M_X64
+)
+
+242 #´agm¨
+comm’t
+(
+lib
+, "clanDisplay-x64-static-mtdll-uc-debug.lib")
+
+243 #´agm¨
+comm’t
+(
+lib
+, "libjpeg-x64-static-mtdll-debug.lib")
+
+244 #´agm¨
+comm’t
+(
+lib
+, "libpng-x64-static-mtdll-debug.lib")
+
+245 #´agm¨
+comm’t
+(
+lib
+, "freetype-x64-static-mtdll-debug.lib")
+
+247 #´agm¨
+comm’t
+(
+lib
+, "clanDisplay-static-mtdll-uc-debug.lib")
+
+248 #´agm¨
+comm’t
+(
+lib
+, "libjpeg-static-mtdll-debug.lib")
+
+249 #´agm¨
+comm’t
+(
+lib
+, "libpng-static-mtdll-debug.lib")
+
+250 #´agm¨
+comm’t
+(
+lib
+, "freetype-static-mtdll-debug.lib")
+
+253 #´agm¨
+comm’t
+(
+lib
+, "winmm.lib")
+
+254 #´agm¨
+comm’t
+(
+lib
+, "dinput8.lib")
+
+255 #´agm¨
+comm’t
+(
+lib
+, "dxguid.lib")
+
+257 #ià!
+defšed
+ (
+_DEBUG
+)
+
+258 #ià
+defšed
+(
+_M_X64
+)
+
+259 #´agm¨
+comm’t
+(
+lib
+, "clanDisplay-x64-static-mt-uc.lib")
+
+260 #´agm¨
+comm’t
+(
+lib
+, "libjpeg-x64-static-mt.lib")
+
+261 #´agm¨
+comm’t
+(
+lib
+, "libpng-x64-static-mt.lib")
+
+262 #´agm¨
+comm’t
+(
+lib
+, "freetype-x64-static-mt.lib")
+
+264 #´agm¨
+comm’t
+(
+lib
+, "clanDisplay-static-mt-uc.lib")
+
+265 #´agm¨
+comm’t
+(
+lib
+, "libjpeg-static-mt.lib")
+
+266 #´agm¨
+comm’t
+(
+lib
+, "libpng-static-mt.lib")
+
+267 #´agm¨
+comm’t
+(
+lib
+, "freetype-static-mt.lib")
+
+270 #ià
+defšed
+(
+_M_X64
+)
+
+271 #´agm¨
+comm’t
+(
+lib
+, "clanDisplay-x64-static-mt-uc-debug.lib")
+
+272 #´agm¨
+comm’t
+(
+lib
+, "libjpeg-x64-static-mt-debug.lib")
+
+273 #´agm¨
+comm’t
+(
+lib
+, "libpng-x64-static-mt-debug.lib")
+
+274 #´agm¨
+comm’t
+(
+lib
+, "freetype-x64-static-mt-debug.lib")
+
+276 #´agm¨
+comm’t
+(
+lib
+, "clanDisplay-static-mt-uc-debug.lib")
+
+277 #´agm¨
+comm’t
+(
+lib
+, "libjpeg-static-mt-debug.lib")
+
+278 #´agm¨
+comm’t
+(
+lib
+, "libpng-static-mt-debug.lib")
+
+279 #´agm¨
+comm’t
+(
+lib
+, "freetype-static-mt-debug.lib")
+
+282 #´agm¨
+comm’t
+(
+lib
+, "winmm.lib")
+
+283 #´agm¨
+comm’t
+(
+lib
+, "dinput8.lib")
+
+284 #´agm¨
+comm’t
+(
+lib
+, "dxguid.lib")
+
+	@/usr/include/ClanLib/gl.h
+
+33 #´agm¨
+Úû
+
+
+35 #ifdeà
+__ılu¥lus_şi
+
+
+36 #´agm¨
+mªaged
+(
+push
+, 
+off
+)
+
+39 
+	~"GL/İ’gl.h
+"
+
+40 
+	~"GL/İ’gl_defšes.h
+"
+
+41 
+	~"GL/İ’gl_rg‘.h
+"
+
+42 
+	~"GL/İ’gl_wšdow_desütiÚ.h
+"
+
+43 
+	~"GL/İ’gl_w¿p.h
+"
+
+44 
+	~"GL/£tup_gl.h
+"
+
+45 
+	~"GL/İ’gl_g¿phic_cÚ‹xt.h
+"
+
+47 #ifdeà
+__ılu¥lus_şi
+
+
+48 #´agm¨
+mªaged
+(
+pİ
+)
+
+51 #ià
+defšed
+ (
+_MSC_VER
+)
+
+52 #ià!
+defšed
+ (
+UNICODE
+)
+
+53 #ià
+defšed
+ (
+CL_DLL
+)
+
+54 #ià!
+defšed
+ (
+_DEBUG
+)
+
+55 #ià
+defšed
+(
+_M_X64
+)
+
+56 #´agm¨
+comm’t
+(
+lib
+, "clanGL-x64-dll.lib")
+
+58 #´agm¨
+comm’t
+(
+lib
+, "clanGL-dll.lib")
+
+61 #ià
+defšed
+(
+_M_X64
+)
+
+62 #´agm¨
+comm’t
+(
+lib
+, "clanGL-x64-dll-debug.lib")
+
+64 #´agm¨
+comm’t
+(
+lib
+, "clanGL-dll-debug.lib")
+
+67 #–ià
+defšed
+ (
+_DLL
+)
+
+68 #ià!
+defšed
+ (
+_DEBUG
+)
+
+69 #ià
+defšed
+(
+_M_X64
+)
+
+70 #´agm¨
+comm’t
+(
+lib
+, "clanGL-x64-static-mtdll.lib")
+
+72 #´agm¨
+comm’t
+(
+lib
+, "clanGL-static-mtdll.lib")
+
+75 #ià
+defšed
+(
+_M_X64
+)
+
+76 #´agm¨
+comm’t
+(
+lib
+, "clanGL-x64-static-mtdll-debug.lib")
+
+78 #´agm¨
+comm’t
+(
+lib
+, "clanGL-static-mtdll-debug.lib")
+
+81 #´agm¨
+comm’t
+(
+lib
+, "winmm.lib")
+
+82 #´agm¨
+comm’t
+(
+lib
+, "dinput8.lib")
+
+83 #´agm¨
+comm’t
+(
+lib
+, "dxguid.lib")
+
+84 #´agm¨
+comm’t
+(
+lib
+, "OpenGL32.lib")
+
+85 #´agm¨
+comm’t
+(
+lib
+, "GLU32.lib")
+
+87 #ià!
+defšed
+ (
+_DEBUG
+)
+
+88 #ià
+defšed
+(
+_M_X64
+)
+
+89 #´agm¨
+comm’t
+(
+lib
+, "clanGL-x64-static-mt.lib")
+
+91 #´agm¨
+comm’t
+(
+lib
+, "clanGL-static-mt.lib")
+
+94 #ià
+defšed
+(
+_M_X64
+)
+
+95 #´agm¨
+comm’t
+(
+lib
+, "clanGL-x64-static-mt-debug.lib")
+
+97 #´agm¨
+comm’t
+(
+lib
+, "clanGL-static-mt-debug.lib")
+
+100 #´agm¨
+comm’t
+(
+lib
+, "winmm.lib")
+
+101 #´agm¨
+comm’t
+(
+lib
+, "dinput8.lib")
+
+102 #´agm¨
+comm’t
+(
+lib
+, "dxguid.lib")
+
+103 #´agm¨
+comm’t
+(
+lib
+, "OpenGL32.lib")
+
+104 #´agm¨
+comm’t
+(
+lib
+, "GLU32.lib")
+
+107 #ià
+defšed
+ (
+CL_DLL
+)
+
+108 #ià!
+defšed
+ (
+_DEBUG
+)
+
+109 #ià
+defšed
+(
+_M_X64
+)
+
+110 #´agm¨
+comm’t
+(
+lib
+, "clanGL-x64-dll-uc.lib")
+
+112 #´agm¨
+comm’t
+(
+lib
+, "clanGL-dll-uc.lib")
+
+115 #ià
+defšed
+(
+_M_X64
+)
+
+116 #´agm¨
+comm’t
+(
+lib
+, "clanGL-x64-dll-uc-debug.lib")
+
+118 #´agm¨
+comm’t
+(
+lib
+, "clanGL-dll-uc-debug.lib")
+
+121 #–ià
+defšed
+ (
+_DLL
+)
+
+122 #ià!
+defšed
+ (
+_DEBUG
+)
+
+123 #ià
+defšed
+(
+_M_X64
+)
+
+124 #´agm¨
+comm’t
+(
+lib
+, "clanGL-x64-static-mtdll-uc.lib")
+
+126 #´agm¨
+comm’t
+(
+lib
+, "clanGL-static-mtdll-uc.lib")
+
+129 #ià
+defšed
+(
+_M_X64
+)
+
+130 #´agm¨
+comm’t
+(
+lib
+, "clanGL-x64-static-mtdll-uc-debug.lib")
+
+132 #´agm¨
+comm’t
+(
+lib
+, "clanGL-static-mtdll-uc-debug.lib")
+
+135 #´agm¨
+comm’t
+(
+lib
+, "winmm.lib")
+
+136 #´agm¨
+comm’t
+(
+lib
+, "dinput8.lib")
+
+137 #´agm¨
+comm’t
+(
+lib
+, "dxguid.lib")
+
+138 #´agm¨
+comm’t
+(
+lib
+, "OpenGL32.lib")
+
+139 #´agm¨
+comm’t
+(
+lib
+, "GLU32.lib")
+
+141 #ià!
+defšed
+ (
+_DEBUG
+)
+
+142 #ià
+defšed
+(
+_M_X64
+)
+
+143 #´agm¨
+comm’t
+(
+lib
+, "clanGL-x64-static-mt-uc.lib")
+
+145 #´agm¨
+comm’t
+(
+lib
+, "clanGL-static-mt-uc.lib")
+
+148 #ià
+defšed
+(
+_M_X64
+)
+
+149 #´agm¨
+comm’t
+(
+lib
+, "clanGL-x64-static-mt-uc-debug.lib")
+
+151 #´agm¨
+comm’t
+(
+lib
+, "clanGL-static-mt-uc-debug.lib")
+
+154 #´agm¨
+comm’t
+(
+lib
+, "winmm.lib")
+
+155 #´agm¨
+comm’t
+(
+lib
+, "dinput8.lib")
+
+156 #´agm¨
+comm’t
+(
+lib
+, "dxguid.lib")
+
+157 #´agm¨
+comm’t
+(
+lib
+, "OpenGL32.lib")
+
+158 #´agm¨
+comm’t
+(
+lib
+, "GLU32.lib")
+
+	@/usr/include/ClanLib/gui.h
+
+34 #´agm¨
+Úû
+
+
+36 #ifdeà
+__ılu¥lus_şi
+
+
+37 #´agm¨
+mªaged
+(
+push
+, 
+off
+)
+
+40 
+	~"GUI/£tup_gui.h
+"
+
+41 
+	~"GUI/acûË¿tÜ_bË.h
+"
+
+42 
+	~"GUI/acûË¿tÜ_key.h
+"
+
+43 
+	~"GUI/gui_compÚ’t.h
+"
+
+44 
+	~"GUI/gui_compÚ’t_desütiÚ.h
+"
+
+45 
+	~"GUI/gui_Ïyout.h
+"
+
+46 
+	~"GUI/gui_Ïyout_cÜÃrs.h
+"
+
+47 
+	~"GUI/gui_mes§ge.h
+"
+
+48 
+	~"GUI/gui_mes§ge_šput.h
+"
+
+49 
+	~"GUI/gui_mes§ge_»size.h
+"
+
+50 
+	~"GUI/gui_mes§ge_focus_chªge.h
+"
+
+51 
+	~"GUI/gui_mes§ge_aùiv©iÚ_chªge.h
+"
+
+52 
+	~"GUI/gui_mes§ge_şo£.h
+"
+
+53 
+	~"GUI/gui_mes§ge_poš‹r.h
+"
+
+54 
+	~"GUI/gui_mªag”.h
+"
+
+55 
+	~"GUI/gui_wšdow_mªag”.h
+"
+
+56 
+	~"GUI/gui_wšdow_mªag”_sy¡em.h
+"
+
+57 
+	~"GUI/gui_wšdow_mªag”_‹xtu».h
+"
+
+58 
+	~"GUI/gui_wšdow_mªag”_‹xtu»_wšdow.h
+"
+
+59 
+	~"GUI/gui_theme.h
+"
+
+60 
+	~"GUI/gui_theme_deçuÉ.h
+"
+
+61 
+	~"GUI/gui_theme_·¹.h
+"
+
+62 
+	~"GUI/gui_theme_·¹_´İ”ty.h
+"
+
+63 
+	~"GUI/CompÚ’ts/checkbox.h
+"
+
+64 
+	~"GUI/CompÚ’ts/combobox.h
+"
+
+65 
+	~"GUI/CompÚ’ts/äame.h
+"
+
+66 
+	~"GUI/CompÚ’ts/groupbox.h
+"
+
+67 
+	~"GUI/CompÚ’ts/imagev›w.h
+"
+
+68 
+	~"GUI/CompÚ’ts/Ïb–.h
+"
+
+69 
+	~"GUI/CompÚ’ts/lš“d™.h
+"
+
+70 
+	~"GUI/CompÚ’ts/li¡v›w.h
+"
+
+71 
+	~"GUI/CompÚ’ts/li¡v›w_h—d”.h
+"
+
+72 
+	~"GUI/CompÚ’ts/li¡v›w_cŞumn_d©a.h
+"
+
+73 
+	~"GUI/CompÚ’ts/maš_wšdow.h
+"
+
+74 
+	~"GUI/CompÚ’ts/m’ub¬.h
+"
+
+75 
+	~"GUI/CompÚ’ts/İ’fedŸlog.h
+"
+
+76 
+	~"GUI/CompÚ’ts/pİupm’u.h
+"
+
+77 
+	~"GUI/CompÚ’ts/´og»ssb¬.h
+"
+
+78 
+	~"GUI/CompÚ’ts/push_bu‰Ú.h
+"
+
+79 
+	~"GUI/CompÚ’ts/¿diobu‰Ú.h
+"
+
+80 
+	~"GUI/CompÚ’ts/§vefedŸlog.h
+"
+
+81 
+	~"GUI/CompÚ’ts/süŞlb¬.h
+"
+
+82 
+	~"GUI/CompÚ’ts/¥š.h
+"
+
+83 
+	~"GUI/CompÚ’ts/¡©usb¬.h
+"
+
+84 
+	~"GUI/CompÚ’ts/b.h
+"
+
+85 
+	~"GUI/CompÚ’ts/b_·ge.h
+"
+
+86 
+	~"GUI/CompÚ’ts/‹x‹d™.h
+"
+
+87 
+	~"GUI/CompÚ’ts/toŞb¬.h
+"
+
+88 
+	~"GUI/CompÚ’ts/toŞb¬_™em.h
+"
+
+89 
+	~"GUI/CompÚ’ts/toŞt.h
+"
+
+90 
+	~"GUI/CompÚ’ts/¦id”.h
+"
+
+91 
+	~"GUI/CompÚ’ts/wšdow.h
+"
+
+92 
+	~"GUI/Provid”s/gui_theme_´ovid”.h
+"
+
+93 
+	~"GUI/Provid”s/gui_Ïyout_´ovid”.h
+"
+
+94 
+	~"GUI/Provid”s/gui_wšdow_mªag”_´ovid”.h
+"
+
+96 #ifdeà
+__ılu¥lus_şi
+
+
+97 #´agm¨
+mªaged
+(
+pİ
+)
+
+100 #ià
+defšed
+ (
+_MSC_VER
+)
+
+101 #ià!
+defšed
+ (
+UNICODE
+)
+
+102 #ià
+defšed
+ (
+CL_DLL
+)
+
+103 #ià!
+defšed
+ (
+_DEBUG
+)
+
+104 #ià
+defšed
+(
+_M_X64
+)
+
+105 #´agm¨
+comm’t
+(
+lib
+, "clanGUI-x64-dll.lib")
+
+107 #´agm¨
+comm’t
+(
+lib
+, "clanGUI-dll.lib")
+
+110 #ià
+defšed
+(
+_M_X64
+)
+
+111 #´agm¨
+comm’t
+(
+lib
+, "clanGUI-x64-dll-debug.lib")
+
+113 #´agm¨
+comm’t
+(
+lib
+, "clanGUI-dll-debug.lib")
+
+116 #–ià
+defšed
+ (
+_DLL
+)
+
+117 #ià!
+defšed
+ (
+_DEBUG
+)
+
+118 #ià
+defšed
+(
+_M_X64
+)
+
+119 #´agm¨
+comm’t
+(
+lib
+, "clanGUI-x64-static-mtdll.lib")
+
+121 #´agm¨
+comm’t
+(
+lib
+, "clanGUI-static-mtdll.lib")
+
+124 #ià
+defšed
+(
+_M_X64
+)
+
+125 #´agm¨
+comm’t
+(
+lib
+, "clanGUI-x64-static-mtdll-debug.lib")
+
+127 #´agm¨
+comm’t
+(
+lib
+, "clanGUI-static-mtdll-debug.lib")
+
+131 #ià!
+defšed
+ (
+_DEBUG
+)
+
+132 #ià
+defšed
+(
+_M_X64
+)
+
+133 #´agm¨
+comm’t
+(
+lib
+, "clanGUI-x64-static-mt.lib")
+
+135 #´agm¨
+comm’t
+(
+lib
+, "clanGUI-static-mt.lib")
+
+138 #ià
+defšed
+(
+_M_X64
+)
+
+139 #´agm¨
+comm’t
+(
+lib
+, "clanGUI-x64-static-mt-debug.lib")
+
+141 #´agm¨
+comm’t
+(
+lib
+, "clanGUI-static-mt-debug.lib")
+
+146 #ià
+defšed
+ (
+CL_DLL
+)
+
+147 #ià!
+defšed
+ (
+_DEBUG
+)
+
+148 #ià
+defšed
+(
+_M_X64
+)
+
+149 #´agm¨
+comm’t
+(
+lib
+, "clanGUI-x64-dll-uc.lib")
+
+151 #´agm¨
+comm’t
+(
+lib
+, "clanGUI-dll-uc.lib")
+
+154 #ià
+defšed
+(
+_M_X64
+)
+
+155 #´agm¨
+comm’t
+(
+lib
+, "clanGUI-x64-dll-uc-debug.lib")
+
+157 #´agm¨
+comm’t
+(
+lib
+, "clanGUI-dll-uc-debug.lib")
+
+160 #–ià
+defšed
+ (
+_DLL
+)
+
+161 #ià!
+defšed
+ (
+_DEBUG
+)
+
+162 #ià
+defšed
+(
+_M_X64
+)
+
+163 #´agm¨
+comm’t
+(
+lib
+, "clanGUI-x64-static-mtdll-uc.lib")
+
+165 #´agm¨
+comm’t
+(
+lib
+, "clanGUI-static-mtdll-uc.lib")
+
+168 #ià
+defšed
+(
+_M_X64
+)
+
+169 #´agm¨
+comm’t
+(
+lib
+, "clanGUI-x64-static-mtdll-uc-debug.lib")
+
+171 #´agm¨
+comm’t
+(
+lib
+, "clanGUI-static-mtdll-uc-debug.lib")
+
+175 #ià!
+defšed
+ (
+_DEBUG
+)
+
+176 #ià
+defšed
+(
+_M_X64
+)
+
+177 #´agm¨
+comm’t
+(
+lib
+, "clanGUI-x64-static-mt-uc.lib")
+
+179 #´agm¨
+comm’t
+(
+lib
+, "clanGUI-static-mt-uc.lib")
+
+182 #ià
+defšed
+(
+_M_X64
+)
+
+183 #´agm¨
+comm’t
+(
+lib
+, "clanGUI-x64-static-mt-uc-debug.lib")
+
+185 #´agm¨
+comm’t
+(
+lib
+, "clanGUI-static-mt-uc-debug.lib")
+
+	@
+1
+.
+1
+/usr/include
+15
+237
+app.cc
+app.h
+event.cc
+init.cc
+loop.cc
+precomp.cc
+precomp.h
+program.cc
+program.h
+render.cc
+/usr/include/ClanLib/application.h
+/usr/include/ClanLib/core.h
+/usr/include/ClanLib/display.h
+/usr/include/ClanLib/gl.h
+/usr/include/ClanLib/gui.h

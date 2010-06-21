@@ -1,0 +1,20 @@
+#OBJECTS := $(wildcard *.o)
+FILES:= $(shell ls)
+OBJECTS:=$(filter %.cc, $(FILES))
+OBJECTS+=$(filter %.h, $(FILES))
+PACKAGES = clanCore-2.1 clanDisplay-2.1 clanApp-2.1 clanGL-2.1 clanGUI-2.1
+#CPPFLAGS = `pkg-config --cflags $(PACKAGES)`
+CPPFLAGS = -MM -g
+LINKLIB   = -lpthread -lbox2d
+LIBS = `pkg-config --libs $(PACKAGES)`
+CXX = g++
+
+MAIN:$(OBJECTS)
+	@$(CXX)  -g -Wall -o Main $(OBJECTS) $(LIBS) $(LINKLIB)
+
+
+.PHONY:clean
+clean:
+	-rm -rf *.o
+	-rm Main 
+
