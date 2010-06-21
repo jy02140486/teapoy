@@ -9,7 +9,7 @@ int T_App::start()
 {
 	if (init() == false)
 	{
-		return 0;
+		return -1;
 	}
 
 	while (!mQuit)
