@@ -18,6 +18,5 @@ int T_App::start()
 		render();
 	}
 
-	mpConsole->display_close_message();
 	return 0;
 }
