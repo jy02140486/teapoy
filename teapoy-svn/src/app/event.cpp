@@ -9,7 +9,7 @@ T_Event::T_Event()
 
 int T_Event::eventInit()
 {
-	//配置事件插槽
+	//閰嶇疆浜嬩欢鎻掓Ы
 	slotWindowClose = mpDisplayWindow->sig_window_close().connect(this, 
 		&T_Event::onExitApp);
 	slotKeyboardUp = mKeyboard.sig_key_up().connect(this, 
@@ -27,14 +27,14 @@ int T_Event::eventInit()
 
 
 
-//以下为事件处理具体函数：
-//-其他事件
+//浠ヤ笅涓轰簨浠跺鐞嗗叿浣撳嚱鏁帮細
+//-鍏朵粬浜嬩欢
 void T_Event::onExitApp()
 {
 	mQuit = true;
 }
 
-//-键盘事件
+//-閿洏浜嬩欢
 
 void T_Event::onKeyboardUp(const CL_InputEvent &key,
 						   const CL_InputState &state)
@@ -43,7 +43,7 @@ void T_Event::onKeyboardUp(const CL_InputEvent &key,
 		mQuit = true;
 }
 
-//-鼠标事件
+//-榧犳爣浜嬩欢
 void T_Event::onMouseMove(const CL_InputEvent &key, const CL_InputState &state)
 {
 }
