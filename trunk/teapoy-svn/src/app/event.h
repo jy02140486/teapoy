@@ -32,7 +32,7 @@ protected:
 
 	bool mQuit;
 
-	//ÒÔÏÂÎªslots£º
+	//ä»¥ä¸‹ä¸ºslotsï¼š
 	CL_Slot		slotWindowClose;
 	CL_Slot		slotKeyboardUp;
 	CL_Slot		slotMouseMove;
@@ -40,15 +40,15 @@ protected:
 
 	int		eventInit();
 
-	//ÒÔÏÂÎªÊÂ¼ş´¦Àí¾ßÌåº¯Êı£º
-	//-ÆäËûÊÂ¼ş
+	//ä»¥ä¸‹ä¸ºäº‹ä»¶å¤„ç†å…·ä½“å‡½æ•°ï¼š
+	//-å…¶ä»–äº‹ä»¶
 	void	onExitApp();
 
-	//-¼üÅÌÊÂ¼ş
+	//-é”®ç›˜äº‹ä»¶
 	void onKeyboardUp(const CL_InputEvent &, const CL_InputState &);
 
 
-	//-Êó±êÊÂ¼ş
+	//-é¼ æ ‡äº‹ä»¶
 	void onMouseMove(const CL_InputEvent &, const CL_InputState &);
 	void onMouseDown(const CL_InputEvent &, const CL_InputState &);
 };

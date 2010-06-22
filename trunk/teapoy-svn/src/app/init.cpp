@@ -8,10 +8,22 @@ bool T_App::init()
 	mWinDesc.set_title("Teapoy");
 	mWinDesc.set_allow_resize(true);
 	mWinDesc.set_size(CL_Size (800, 600), false);
+	//resource directory
+	CL_String8 resource = "../../resource/GUITheme/resources.xml";
+	CL_String8 theme = "../../resource/GUITheme/theme.css";
+	
+	//initail resource manager
+	mResManager.load(resource);
+
+	//initail gui theme
+	mGUITheme.set_resources(mResManager);
+
 	//initail gui
 	mpDisplayWindow = new CL_DisplayWindow(mWinDesc);
 	mpWinManager = new CL_GUIWindowManagerTexture(*mpDisplayWindow);
 	mGui.set_window_manager(*mpWinManager);
+	mGui.set_theme(mGUITheme);
+	mGui.set_css_document(theme);
 
 	//initail console window
 	mpConsole = new CL_ConsoleWindow("Console", 80, 100);
