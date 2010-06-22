@@ -18,9 +18,6 @@ public:
 	//render the game
 	void render();
 
-	//quit the game
-	void closeWindow();
-
 private:
 
 
