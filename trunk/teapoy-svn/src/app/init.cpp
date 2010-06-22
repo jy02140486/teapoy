@@ -1,4 +1,5 @@
 #include "app.h"
+#include "event.h"
 
 bool T_App::init()
 {
@@ -8,14 +9,15 @@ bool T_App::init()
 	mWinDesc.set_title("Teapoy");
 	mWinDesc.set_allow_resize(true);
 	mWinDesc.set_size(CL_Size (800, 600), false);
+
 	//resource directory
-	CL_String8 resource = "../../resource/GUITheme/resources.xml";
-	CL_String8 theme = "../../resource/GUITheme/theme.css";
+	CL_String8 resource("../../resource/GUITheme/resources.xml");
+	CL_String8 theme("../../resource/GUITheme/theme.css");
 	
 	//initail resource manager
 	mResManager.load(resource);
 
-	//initail gui theme
+	////initail gui theme
 	mGUITheme.set_resources(mResManager);
 
 	//initail gui

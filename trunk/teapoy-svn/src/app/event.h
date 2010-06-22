@@ -14,6 +14,10 @@ protected:
 	CL_GUIManager					mGui;
 	CL_GUIWindowManagerTexture *	mpWinManager;
 	
+	//resource
+	CL_ResourceManager mResManager;
+	CL_GUIThemeDefault mGUITheme;
+
 
 	//console window
 	CL_ConsoleWindow *mpConsole;
