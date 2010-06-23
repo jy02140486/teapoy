@@ -18,6 +18,7 @@ public:
 	//render the game
 	void render();
 
+	void repain();
 private:
 
 

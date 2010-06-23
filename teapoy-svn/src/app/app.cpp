@@ -14,8 +14,8 @@ int T_App::start()
 
 	while (!mQuit)
 	{
+		mGui.exec(false);
 		loop();
-		render();
 	}
 
 	return 0;
