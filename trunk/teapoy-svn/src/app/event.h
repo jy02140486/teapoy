@@ -18,6 +18,8 @@ protected:
 	CL_ResourceManager mResManager;
 	CL_GUIThemeDefault mGUITheme;
 
+	//GUIComponet window
+	CL_Window *mpComWindow;
 
 	//console window
 	CL_ConsoleWindow *mpConsole;
