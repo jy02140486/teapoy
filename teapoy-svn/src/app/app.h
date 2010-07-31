@@ -2,9 +2,8 @@
 #define APP_H 
 #include "precomp.h"
 #include "event.h"
-#include "../lib/IEvent.h"
 
-class T_App : public T_Event	,public IEvent
+class T_App : public T_Event	
 {
 public:
 	T_App ();

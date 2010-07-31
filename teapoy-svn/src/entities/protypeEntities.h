@@ -3,7 +3,6 @@
 
 #include "Box2D/Box2D.h"
 #include "../app/precomp.h"
-#include "../lib/IEvent.h"
 
 class phyentity
 {
