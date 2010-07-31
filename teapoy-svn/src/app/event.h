@@ -1,9 +1,14 @@
-﻿#ifndef EVENT_H
+#ifndef EVENT_H
 #define EVENT_H 
 #include "precomp.h"
+#include "../entities/protypeEntities.h"
 
 class T_Event
-{
+{	 	
+	bool m_bombSpawning;
+	b2Vec2 m_bombSpawnPoint;
+	b2Body* m_bomb;
+
 public:
 	T_Event();
 
@@ -14,6 +19,11 @@ protected:
 	CL_GUIManager					mGui;
 	CL_GUIWindowManagerTexture *	mpWinManager;
 	
+	//GUIComponets
+ 	CL_PushButton *button1;
+	CL_Slider *slider_vertical;
+	CL_Label *Label1;
+
 	//resource
 	CL_ResourceManager mResManager;
 	CL_GUIThemeDefault mGUITheme;
@@ -40,9 +50,11 @@ protected:
 
 	//以下为slots：
 	CL_Slot		slotWindowClose;
+//	CL_Slot slotWindowClose;
 	CL_Slot		slotKeyboardUp;
 	CL_Slot		slotMouseMove;
 	CL_Slot		slotMouseDown;
+	CL_Slot	slotMouseUp;
 
 	int		eventInit();
 
@@ -57,5 +69,12 @@ protected:
 	//-鼠标事件
 	void onMouseMove(const CL_InputEvent &, const CL_InputState &);
 	void onMouseDown(const CL_InputEvent &, const CL_InputState &);
+	void onMouseUp(const CL_InputEvent &, const CL_InputState &);
+	void CompleteBombSpawn(const b2Vec2& p);
+	void LaunchBomb(const b2Vec2& position, const b2Vec2& velocity);
+
+public:
+	phyentity *mpphytester;
+
 };
 #endif
