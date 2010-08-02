@@ -8,7 +8,13 @@ class T_App : public T_Event
 public:
 	T_App ();
 	int  start();
-	 	CL_Slider *slider_vertical;
+
+	//GUIComponets
+	CL_PushButton *button1;
+	CL_Slider *slider_vertical;
+	CL_Label *Label1;
+
+
 	//initial game enviroment
 	bool init();
 

@@ -7,7 +7,8 @@ void phyentity::Initialize()
 {
 	b2Vec2 gravity(0.0f, 10.0f);
 	world=new b2World(gravity,true);
-	timeStep = 1.0f / 480.0f;
+	
+	timeStep = 480.0f;
 	velocityIterations = 10;
 	positionIterations = 6;
 
@@ -59,7 +60,7 @@ void phyentity::draw(CL_GraphicContext &gc)
 
 void phyentity::updater()
 {
-	world->Step(timeStep,velocityIterations,positionIterations);
+	world->Step(1.0f / timeStep,velocityIterations,positionIterations);
 }
 
 
