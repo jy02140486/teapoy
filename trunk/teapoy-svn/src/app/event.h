@@ -19,10 +19,7 @@ protected:
 	CL_GUIManager					mGui;
 	CL_GUIWindowManagerTexture *	mpWinManager;
 	
-	//GUIComponets
- 	CL_PushButton *button1;
-	CL_Slider *slider_vertical;
-	CL_Label *Label1;
+
 
 	//resource
 	CL_ResourceManager mResManager;
