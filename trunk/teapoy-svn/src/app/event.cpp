@@ -79,6 +79,7 @@ void T_Event::onMouseDown(const CL_InputEvent &key, const CL_InputState &state)
 	aabb.upperBound = m_mouseWorld + d;
 
 	// Query the world for overlapping shapes.
+
 	QueryCallback callback(m_mouseWorld);
 	mpphytester->world->QueryAABB(&callback, aabb);
 
