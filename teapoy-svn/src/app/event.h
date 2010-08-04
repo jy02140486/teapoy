@@ -69,7 +69,7 @@ protected:
 	void onMouseUp(const CL_InputEvent &, const CL_InputState &);
 	void CompleteBombSpawn(const b2Vec2& p);
 	void LaunchBomb(const b2Vec2& position, const b2Vec2& velocity);
-
+	
 public:
 	phyentity *mpphytester;
 
