@@ -31,7 +31,6 @@ public:
 	void OnButton1click();
 	void OnSliderMove();
 
-
 	
 	//void repaint();
 private:
