@@ -56,14 +56,14 @@ bool T_App::init()
 // 		button.set_visible(true,true);
 // 
 		button1=new CL_PushButton(mpComWindow);
-		button1->set_geometry(CL_Rect(10,50,CL_Size(70,30)));
+		button1->set_geometry(CL_Rect(40,50,CL_Size(70,30)));
 		button1->set_text("Add a Body");
 		button1->func_clicked().set(this,&T_App::OnButton1click);
 		
 		//CL_Rect *a=new CL_Rect()
 
 		slider_vertical = new CL_Slider(mpComWindow);
-		slider_vertical->set_geometry(CL_Rect(10, 130, CL_Size(200, 20)));
+		slider_vertical->set_geometry(CL_Rect(40, 130, CL_Size(200, 20)));
 		slider_vertical->set_max(480);
 		slider_vertical->set_min(0);
 		slider_vertical->set_position(480);
@@ -72,7 +72,7 @@ bool T_App::init()
 
 		Label1=new CL_Label(mpComWindow);
 		Label1->set_text("timestep");
-		Label1->set_geometry(CL_Rect(10,115,CL_Size(28,15)));
+		Label1->set_geometry(CL_Rect(40,115,CL_Size(28,15)));
 // 		Label1=new CL_Label(mpComWindow);
 // 		Label1->set_geometry(CL_Rect(10, 100, 20, 20))	;
 // 		Label1->set_text("ggg");
@@ -95,7 +95,7 @@ bool T_App::init()
 		////button.set_selected_in_component_group(true);
 
 		//initail console window
-
+   initRulers();
 
 	//initail events
 	mInput = mpDisplayWindow->get_ic();

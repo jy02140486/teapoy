@@ -2,6 +2,7 @@
 #define APP_H 
 #include "precomp.h"
 #include "event.h"
+#include <list>
 
 class T_App : public T_Event	
 {
@@ -13,6 +14,7 @@ public:
 	CL_PushButton *button1;
 	CL_Slider *slider_vertical;
 	CL_Label *Label1;
+	std::list<CL_Label*> rulers;
 
 
 	//initial game enviroment
@@ -30,6 +32,7 @@ public:
 	void onMouseUp(const CL_InputEvent &, const CL_InputState &);
 	void OnButton1click();
 	void OnSliderMove();
+	void initRulers();
 
 	
 	//void repaint();

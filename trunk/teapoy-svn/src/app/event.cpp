@@ -47,6 +47,8 @@ void T_Event::onKeyboardUp(const CL_InputEvent &key,
 		mQuit = true;
 }
 
+
+
 //-鼠标事件
 void T_Event::onMouseMove(const CL_InputEvent &key, const CL_InputState &state)
 {
@@ -79,13 +81,14 @@ void T_Event::onMouseDown(const CL_InputEvent &key, const CL_InputState &state)
 	aabb.upperBound = m_mouseWorld + d;
 
 	// Query the world for overlapping shapes.
+	//declare obj
+	QueryCallback callingback(m_mouseWorld);	    
+	mpphytester->world->QueryAABB(&callingback, aabb);
 
-	QueryCallback callback(m_mouseWorld);
-	mpphytester->world->QueryAABB(&callback, aabb);
 
-	if (callback.m_fixture)
+	if (callingback.m_fixture)
 	{
-		b2Body* body = callback.m_fixture->GetBody();
+		b2Body* body = callingback.m_fixture->GetBody();
 	//	b2MouseJointDef mpphytester->mjd;
 		mpphytester->mjd.bodyA = mpphytester->groundBody;
 		mpphytester->mjd.bodyB = body;
