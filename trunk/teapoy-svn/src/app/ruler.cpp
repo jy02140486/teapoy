@@ -1,5 +1,4 @@
 #include "app.h"
-#include <stdio.h>
 #include "event.h"
 
 void T_App::initRulers()
@@ -23,9 +22,10 @@ void T_App::initRulers()
 		ref->set_geometry(CL_Rect(4,i,CL_Size(20,10)));
 		
 		char *temp=new char(10);
-		//CL_StringRef str= sprintf("%d", i);
+		sprintf(temp,"%d",i);
+		CL_StringRef str=temp;
 
 
-		//ref->set_text(str);
+		ref->set_text(str);
 	}
 }
