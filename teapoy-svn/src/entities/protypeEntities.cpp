@@ -103,7 +103,7 @@ void phyentity::drawbox(CL_GraphicContext *gc,b2Body *bodyref)
 		vecs.set_attributes(1,colors);
 	else
 		vecs.set_attributes(1,ground);
-
+										
 	gc->set_program_object(cl_program_color_only);
 	gc->draw_primitives(CL_PrimitivesType::cl_line_loop,vn,vecs);
 }
