@@ -1,14 +1,14 @@
 #include "app.h"
 #include "event.h"
 
-void T_App::initRulers()
+void T_App::initRulers(CL_Window *refwnd)
 {
 	std::list<CL_Label*>::iterator itr;
 
 	CL_Label *ref;
-	for (int i=0;i<mpComWindow->get_height();i+=20)
+	for (int i=0;i<refwnd->get_height();i+=20)
 	{
-		rulers.push_back(new CL_Label(mpComWindow));
+		rulers.push_back(new CL_Label(refwnd));
 
  		itr=rulers.end();
   		

@@ -18,6 +18,13 @@ public:
 	CL_Label *Label1;
 	std::list<CL_Label*> rulers;
 
+	//Sub	Components
+	CL_Window *WndAdd;
+	CL_PushButton *AddCusBody;
+	CL_ComboBox *b2BodyTypelist;
+	CL_LineEdit *highth,*width,*mass;
+	CL_Label *lbw,*lbh,*lbm;
+
 
 	//initial game enviroment
 	bool init();
@@ -34,9 +41,9 @@ public:
 	void onMouseUp(const CL_InputEvent &, const CL_InputState &);
 	void OnButton1click();
 	void OnSliderMove();
-	void initRulers();
+	void initRulers(CL_Window *refwnd);
+  	void OnAddCusBodyClick();
 
-	
 	//void repaint();
 private:
 
