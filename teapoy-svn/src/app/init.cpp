@@ -42,19 +42,50 @@ bool T_App::init()
 
 		mpComWindow = new CL_Window(&mGui, comWindowDesc);
 		mpComWindow->set_draggable(true);
-		//mpComWindow->set_blocks_default_action(true);
-	
-		CL_Rect buttoinarea(mpComWindow->get_client_area().left+10
-			,mpComWindow->get_client_area().top+60,
-			CL_Size(30,80));
-			//initail button
-// 		CL_PushButton button(mpComWindow);
-// 		
-// 		button.set_geometry(buttoinarea);
-// 		button.set_text("FUCK");
-// 		button.set_toggle(true);
-// 		button.set_visible(true,true);
-// 
+
+		comWindowDesc.set_position(CL_Rect(480,0,CL_Size(320,200)),true);
+		comWindowDesc.show_border(false);
+		comWindowDesc.set_allow_resize(true);
+		comWindowDesc.set_title("Add a body");
+		comWindowDesc.set_size(CL_Size(300, 320),false);
+		comWindowDesc.set_allow_resize(true);
+		comWindowDesc.set_layered(true);
+
+		WndAdd=new CL_Window(&mGui,comWindowDesc);
+		WndAdd->set_draggable(true);
+		WndAdd->set_visible(false);
+		
+		AddCusBody=new CL_PushButton(WndAdd);
+		AddCusBody->set_geometry(CL_Rect(40,50,CL_Size(70,30)));
+		AddCusBody->set_text("Comfirm");
+		AddCusBody->func_clicked().set(this,&T_App::OnAddCusBodyClick);
+		
+
+
+		b2BodyTypelist=new CL_ComboBox(WndAdd);
+		b2BodyTypelist->set_geometry(CL_Rect(40, 110, CL_Size(200, 20)));
+// 		b2BodyTypelist->
+
+		highth=new CL_LineEdit(WndAdd);
+		highth->set_geometry(CL_Rect(80, 150, CL_Size(40, 20)));
+		lbh=new CL_Label(WndAdd);
+		lbh->set_text("hight");
+		lbh->set_geometry(CL_Rect(40, 150, CL_Size(40, 20)))	;
+
+		width=new CL_LineEdit(WndAdd);
+		width->set_geometry(CL_Rect(80, 180, CL_Size(40, 20)));
+		lbw=new CL_Label(WndAdd);
+		lbw->set_text("width");
+		lbw->set_geometry(CL_Rect(40, 180, CL_Size(40, 20)))	;
+
+		mass=new CL_LineEdit(WndAdd);
+		mass->set_geometry(CL_Rect(80, 210, CL_Size(40, 20)));
+		lbm=new CL_Label(WndAdd);
+		lbm->set_text("mass");
+		lbm->set_geometry(CL_Rect(40, 210, CL_Size(40, 20)))	;
+		
+
+
 		button1=new CL_PushButton(mpComWindow);
 		button1->set_geometry(CL_Rect(40,50,CL_Size(70,30)));
 		button1->set_text("Add a Body");
@@ -73,29 +104,11 @@ bool T_App::init()
 		Label1=new CL_Label(mpComWindow);
 		Label1->set_text("timestep");
 		Label1->set_geometry(CL_Rect(40,115,CL_Size(28,15)));
-// 		Label1=new CL_Label(mpComWindow);
-// 		Label1->set_geometry(CL_Rect(10, 100, 20, 20))	;
-// 		Label1->set_text("ggg");
-// 		CL_PushButton button1(mpComWindow);
-// 		button1.set_geometry(CL_Rect(100, 100, 200, 120));
-// 		button1.set_text("Okay!");
-	//	button1.func_clicked().set(&on_button1_clicked, &button1);
 
-		
-// 		CL_ComboBox combox(mpComWindow);
-// 		combox.set_visible(true, true);
-// 		combox.set_dropdown_height(20);
-// 		combox.set_default(true);
-// 		//button.set_text("Button");
-// 		//CL_GUILayout layout;
-// 		//button.set_layout(layout);
-// 		button.set_visible(true, true);
-		//CL_Image buttonImage(button.get_gc(), "../../resource/GUITheme/Images/ButtonHot.png");
-		//button.set_icon(buttonImage);
-		////button.set_selected_in_component_group(true);
 
 		//initail console window
-   initRulers();
+   initRulers(mpComWindow);
+   initRulers(WndAdd);
 
 	//initail events
 	mInput = mpDisplayWindow->get_ic();

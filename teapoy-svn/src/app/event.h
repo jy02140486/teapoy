@@ -25,7 +25,7 @@ protected:
 	CL_ResourceManager mResManager;
 	CL_GUIThemeDefault mGUITheme;
 
-	//GUIComponet window
+	//Main GUIComponet window
 	CL_Window *mpComWindow;
 
 	//console window

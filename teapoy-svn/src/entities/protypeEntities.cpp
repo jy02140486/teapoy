@@ -60,6 +60,7 @@ void phyentity::draw(CL_GraphicContext &gc)
 void phyentity::updater()
 {
 	world->Step(1.0f / timeStep,velocityIterations,positionIterations);
+	
 }
 
 
