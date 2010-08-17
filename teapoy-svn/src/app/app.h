@@ -12,8 +12,11 @@ public:
 	T_App ();
 	int  start();
 
+	//PhyObj Manager
+	phyentity *mpphytester;
+
 	//GUIComponets
-	CL_PushButton *button1;
+	CL_PushButton *button1,*buttonGrd;
 	CL_Slider *slider_vertical;
 	CL_Label *Label1;
 	std::list<CL_Label*> rulers;
@@ -24,6 +27,9 @@ public:
 	CL_ComboBox *b2BodyTypelist;
 	CL_LineEdit *highth,*width,*mass;
 	CL_Label *lbw,*lbh,*lbm;
+
+	//Sub Wnds
+	WndGroundAdd *addground;
 
 
 	//initial game enviroment
@@ -43,7 +49,8 @@ public:
 	void OnSliderMove();
 	void initRulers(CL_Window *refwnd);
   	void OnAddCusBodyClick();
-
+	void OnbuttonGrdClick();
+	int eventInit();
 	//void repaint();
 private:
 

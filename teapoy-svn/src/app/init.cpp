@@ -90,6 +90,12 @@ bool T_App::init()
 		button1->set_geometry(CL_Rect(40,50,CL_Size(70,30)));
 		button1->set_text("Add a Body");
 		button1->func_clicked().set(this,&T_App::OnButton1click);
+
+		buttonGrd=new CL_PushButton(mpComWindow);
+		buttonGrd->set_geometry(CL_Rect(40,80,CL_Size(70,30)));
+		buttonGrd->set_text("Add a GroundBody");
+		buttonGrd->func_clicked().set(this,&T_App::OnbuttonGrdClick);
+
 		
 		//CL_Rect *a=new CL_Rect()
 
@@ -105,10 +111,13 @@ bool T_App::init()
 		Label1->set_text("timestep");
 		Label1->set_geometry(CL_Rect(40,115,CL_Size(28,15)));
 
+		addground=new WndGroundAdd();
+		addground->Init(&mGui,&comWindowDesc);
 
 		//initail console window
    initRulers(mpComWindow);
    initRulers(WndAdd);
+   initRulers(addground->window);
 
 	//initail events
 	mInput = mpDisplayWindow->get_ic();
@@ -138,6 +147,8 @@ bool T_App::init()
 	}
 	mpphytester=new phyentity();
 	mpphytester->Initialize();
+
+	T_Event::eventInit();
 	T_App::eventInit();
 
 // 	slotMouseDown = mMouse.sig_key_down().connect(this,

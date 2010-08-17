@@ -6,7 +6,7 @@ void T_App::OnButton1click()
 // 	 mpphytester->AddBodyTemp();
 	if (!WndAdd->is_visible()	  )
 	{
-								 WndAdd->set_visible(true);
+		WndAdd->set_visible(true);
 	}
 	else WndAdd->set_visible(false);
 }
@@ -35,4 +35,14 @@ void T_App::OnAddCusBodyClick()
 		 
 	  }		
 	  CL_Console::write_line("%1",mpphytester->world->GetBodyCount());
+}
+
+void T_App::OnbuttonGrdClick()
+{
+	   if (!addground->window->is_visible())
+	   {
+		   addground->window->set_visible(true);
+	   }
+	   else
+	   addground->window->set_visible(false);
 }
