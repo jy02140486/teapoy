@@ -2,6 +2,7 @@
 #define EVENT_H 
 #include "precomp.h"
 #include "../entities/protypeEntities.h"
+#include "WndGroundAdd.h"
 
 class T_Event
 {	 	
@@ -71,7 +72,6 @@ protected:
 	void LaunchBomb(const b2Vec2& position, const b2Vec2& velocity);
 	
 public:
-	phyentity *mpphytester;
 
 };
 #endif
