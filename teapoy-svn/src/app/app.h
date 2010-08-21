@@ -51,6 +51,10 @@ public:
   	void OnAddCusBodyClick();
 	void OnbuttonGrdClick();
 	int eventInit();
+	void OnAddGround();
+
+	bool isClkOnBoard(b2Vec2 pos,CL_Rect Area);
+
 	//void repaint();
 private:
 
