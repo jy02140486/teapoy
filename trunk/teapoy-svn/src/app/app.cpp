@@ -37,15 +37,37 @@ void T_App::onMouseUp(const CL_InputEvent &, const CL_InputState &)
 
 }
 
+bool T_App::isClkOnBoard(b2Vec2 pos,CL_Rect Area)
+{
+	CL_Vec2i temp;
+	temp.x=pos.x;
+	temp.y=pos.y;
+
+	if (Area.contains(temp))
+	{
+		return true;
+	}
+ return false;
+}
+
+
 void T_App::onMouseDown(const CL_InputEvent &, const CL_InputState &)
 {
+
+	
 //  	mpphytester->phyentity::Push(SM_MOUSEDOWN);
 // 	mpDisplayWindow->get_gc().clear(CL_Colorf::red);
 	b2Vec2 m_mouseWorld (mMouse.get_x(),mMouse.get_y());
 
+
+	if (isClkOnBoard(m_mouseWorld,mpComWindow->get_geometry()))
+	{
+		return;
+	}
+
+
 	if (mpphytester->mj != NULL)
 	{
-		//
 		return;
 	}
 
@@ -79,6 +101,11 @@ void T_App::onMouseDown(const CL_InputEvent &, const CL_InputState &)
 		CL_Console::write_line("crap");
 	}
 
+	if (addground->isActivated()&&!isClkOnBoard(m_mouseWorld,addground->window->get_geometry()))
+	{
+		addground->AddVertex(m_mouseWorld);
+	}
+	
 }
 
 void T_App::onMouseMove(const CL_InputEvent &, const CL_InputState &)

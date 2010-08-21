@@ -112,8 +112,10 @@ bool T_App::init()
 		Label1->set_geometry(CL_Rect(40,115,CL_Size(28,15)));
 
 		addground=new WndGroundAdd();
+		comWindowDesc.set_position(CL_Rect(480,40,CL_Size(320,200)),true)   ;
 		addground->Init(&mGui,&comWindowDesc);
-
+		addground->cirfirm->func_clicked().set(this,&T_App::OnAddGround)	;
+		
 		//initail console window
    initRulers(mpComWindow);
    initRulers(WndAdd);
@@ -124,16 +126,6 @@ bool T_App::init()
 	mKeyboard = mInput.get_keyboard();
 	mMouse = mInput.get_mouse();
 	//mJoystick = mInput.get_joystick();
-
-// 	slotWindowClose = mpDisplayWindow->sig_window_close().connect(this, 
-// 		&T_Event::onExitApp);
-// 	slotKeyboardUp = mKeyboard.sig_key_up().connect(this, 
-// 		&T_App::onKeyboardUp);
-// 	slotMouseMove = mMouse.sig_pointer_move().connect(this,
-// 		&T_App::onMouseMove);
-// 
-// 	slotMouseUp=mMouse.sig_key_up().connect(this,
-// 		&T_App::onMouseUp);
 
 	mpConsole = new CL_ConsoleWindow("Console", 80, 100);
 	
