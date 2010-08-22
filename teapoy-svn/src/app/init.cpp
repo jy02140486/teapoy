@@ -13,9 +13,12 @@ bool T_App::init()
 	//mWinDesc.set_refresh_rate(50);
 
 	//resource directory
-	CL_String resource("../../resource/GUITheme/resources.xml");
-	CL_String theme("../../resource/GUITheme/theme.css");
+// 	CL_String resource("../../resource/GUITheme/resources.xml");
+// 	CL_String theme("../../resource/GUITheme/theme.css");
 	
+	CL_String resource("resource/GUITheme/resources.xml");
+	CL_String theme("resource/GUITheme/theme.css");
+
 	//initail resource manager
 	mResManager.load(resource);
 
