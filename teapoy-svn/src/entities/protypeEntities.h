@@ -28,7 +28,6 @@ public:
 	b2MouseJointDef mjd;
 	b2MouseJoint* mj;
 
-
 	//funtions
 	void Initialize();
 	phyentity* getEntities(){return this;}

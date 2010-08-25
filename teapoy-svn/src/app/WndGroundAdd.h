@@ -3,7 +3,7 @@
 
 #include "precomp.h"
 #include "Box2D/Box2D.h"
-#include <vector>
+
 
 class WndGroundAdd
 {   

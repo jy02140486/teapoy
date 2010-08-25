@@ -46,7 +46,7 @@ bool T_App::init()
 		mpComWindow = new CL_Window(&mGui, comWindowDesc);
 		mpComWindow->set_draggable(true);
 
-		comWindowDesc.set_position(CL_Rect(480,0,CL_Size(320,200)),true);
+		comWindowDesc.set_position(CL_Rect(480,0,CL_Size(320,200)),false);
 		comWindowDesc.show_border(false);
 		comWindowDesc.set_allow_resize(true);
 		comWindowDesc.set_title("Add a body");
@@ -99,7 +99,10 @@ bool T_App::init()
 		buttonGrd->set_text("Add a GroundBody");
 		buttonGrd->func_clicked().set(this,&T_App::OnbuttonGrdClick);
 
-		
+		buttonJnt=new CL_PushButton(mpComWindow);
+		buttonJnt->set_geometry(CL_Rect(120,50,CL_Size(70,30)));
+		buttonJnt->set_text("Add a Joint");
+		buttonJnt->func_clicked().set(this,&T_App::OnbuttonJntClick);
 		//CL_Rect *a=new CL_Rect()
 
 		slider_vertical = new CL_Slider(mpComWindow);
@@ -115,10 +118,15 @@ bool T_App::init()
 		Label1->set_geometry(CL_Rect(40,115,CL_Size(28,15)));
 
 		addground=new WndGroundAdd();
-		comWindowDesc.set_position(CL_Rect(480,40,CL_Size(320,200)),true)   ;
+		comWindowDesc.set_position(CL_Rect(480,40,CL_Size(320,200)),false)   ;
 		addground->Init(&mGui,&comWindowDesc);
 		addground->cirfirm->func_clicked().set(this,&T_App::OnAddGround)	;
-		
+
+		addjoint=new WndJointAdd();
+		comWindowDesc.set_position(CL_Rect(480,40,CL_Size(320,200)),false)	;
+		addjoint->Init(&mGui,&comWindowDesc);
+		addjoint->cirfirm->func_clicked().set(this,&T_App::OnAddJnt);
+
 		//initail console window
    initRulers(mpComWindow);
    initRulers(WndAdd);
@@ -140,6 +148,9 @@ bool T_App::init()
 		mpConsole->display_close_message();
 		return false;
 	}
+
+	running=true;
+
 	mpphytester=new phyentity();
 	mpphytester->Initialize();
 

@@ -88,17 +88,23 @@ void T_App::onMouseDown(const CL_InputEvent &, const CL_InputState &)
 	{
 		b2Body* body = callingback.m_fixture->GetBody();
 		//	b2MouseJointDef mpphytester->mjd;
-		mpphytester->mjd.bodyA = mpphytester->groundBody;
-		mpphytester->mjd.bodyB = body;
-		mpphytester->mjd.target = m_mouseWorld;
-		mpphytester->mjd.maxForce = 1000.0f * body->GetMass();
-
-		//	mpphytester->mjd.frequencyHz=1/30.0f;
-
-		mpphytester->mj = (b2MouseJoint*)mpphytester->world->CreateJoint(&mpphytester->mjd);
-
-		body->SetAwake(true);
-		CL_Console::write_line("crap");
+		if (!addjoint->isActivated())
+		{
+			mpphytester->mjd.bodyA = mpphytester->groundBody;
+			mpphytester->mjd.bodyB = body;
+			mpphytester->mjd.target = m_mouseWorld;
+			mpphytester->mjd.maxForce = 1000.0f * body->GetMass();
+	
+			//	mpphytester->mjd.frequencyHz=1/30.0f;
+	
+			mpphytester->mj = (b2MouseJoint*)mpphytester->world->CreateJoint(&mpphytester->mjd);
+	
+			body->SetAwake(true);
+			}
+		else
+		{
+			addjoint->ConnectBody(body,body->GetPosition());
+		}
 	}
 
 	if (addground->isActivated()&&!isClkOnBoard(m_mouseWorld,addground->window->get_geometry()))

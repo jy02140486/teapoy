@@ -39,15 +39,18 @@ void T_App::OnAddCusBodyClick()
 
 void T_App::OnbuttonGrdClick()
 {
-	   if (!addground->window->is_visible())
-	   {
-		   addground->window->set_visible(true);
-
-	   }
-	   else
-	   addground->window->set_visible(false);
-
-	   CL_Console::write_line("");
+// 	   if (!addground->window->is_visible())
+// 	   {
+// 		   addground->window->set_visible(true);
+// 
+// 	   }
+// 	   else
+// 	   addground->window->set_visible(false);
+	if (addground->isActivated())
+	{
+		addground->setActivated(false);
+	}										
+	else addground->setActivated(true);
  
 }
 
@@ -72,16 +75,41 @@ void T_App::OnAddGround()
 	shape.SetAsEdge(p1,p2) ;
 	body->CreateFixture(&shape,0.0f);
 
-// 	  CL_Console::write_line("former:%1",addground->cur);
-// 
-// 	  CL_Console::write_line("later:%1",addground->cur);
-//  
-// 	  b2BodyDef bodyDef;
-// 	  bodyDef.type = b2_staticBody;
-// 	  bodyDef.position.Set(180.0f, 40.0f);
-// 
-// 	  b2Body *body=mpphytester->world->CreateBody(&bodyDef);
-// 	  body->CreateFixture(&shapedef,8.0f);
 	 addground->setActivated(false);
 }
 
+void T_App::OnbuttonJntClick()
+{
+	  if (addjoint->isActivated())
+	  {
+		  addjoint->setActivated(false);
+		  running=true;
+	  }
+	  else {
+		  addjoint->setActivated(true);
+		  running=false;
+	  }
+}
+
+void T_App::OnAddJnt()
+{
+	b2DistanceJointDef jointDef;
+	if (addjoint->bodyA)
+	{
+		CL_Console::write_line("a pos %1 %2",addjoint->archA.x,addjoint->archA.y);
+	}
+	if (addjoint->bodyB)
+	{
+		CL_Console::write_line("b pos %1 %2",addjoint->archB.x,addjoint->archB.y);
+	}
+
+	jointDef.Initialize(addjoint->bodyA,addjoint->bodyB,addjoint->archA,addjoint->archB);
+	
+// 	jointDef.length=addjoint->lenth->get_value_float();
+
+
+	mpphytester->world->CreateJoint(&jointDef);
+
+	addjoint->setActivated(false);
+	running=true;
+}

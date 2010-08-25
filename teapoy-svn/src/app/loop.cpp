@@ -2,7 +2,9 @@
 
 void T_App::loop()
 {
-	mpphytester->getEntities()->updater();
+	if (running)		
+		mpphytester->getEntities()->updater();
+	
 
 	CL_KeepAlive::process();
 
