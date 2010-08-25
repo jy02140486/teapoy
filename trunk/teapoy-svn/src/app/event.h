@@ -2,7 +2,8 @@
 #define EVENT_H 
 #include "precomp.h"
 #include "../entities/protypeEntities.h"
-#include "WndGroundAdd.h"
+
+
 
 class T_Event
 {	 	

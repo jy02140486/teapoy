@@ -4,6 +4,7 @@
 
 void phyentity::Initialize()
 {
+
 	b2Vec2 gravity(0.0f, 10.0f);
 	world=new b2World(gravity,true);
 	

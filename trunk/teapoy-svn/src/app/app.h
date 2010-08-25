@@ -6,6 +6,10 @@
 #include <list>
 #include<stdio.h>
 
+//Sub Wnds
+#include "WndGroundAdd.h"
+#include "WndJointAdd.h"
+
 class T_App : public T_Event	
 {
 public:
@@ -14,9 +18,10 @@ public:
 
 	//PhyObj Manager
 	phyentity *mpphytester;
+	bool running;
 
 	//GUIComponets
-	CL_PushButton *button1,*buttonGrd;
+	CL_PushButton *button1,*buttonGrd,*buttonJnt;
 	CL_Slider *slider_vertical;
 	CL_Label *Label1;
 	std::list<CL_Label*> rulers;
@@ -30,7 +35,7 @@ public:
 
 	//Sub Wnds
 	WndGroundAdd *addground;
-
+	WndJointAdd *addjoint;
 
 	//initial game enviroment
 	bool init();
@@ -45,13 +50,21 @@ public:
 	void onMouseMove(const CL_InputEvent &, const CL_InputState &);
 	void onMouseDown(const CL_InputEvent &, const CL_InputState &);
 	void onMouseUp(const CL_InputEvent &, const CL_InputState &);
+	void initRulers(CL_Window *refwnd);
+  
+	//GUI component on MainBoard respon
 	void OnButton1click();
 	void OnSliderMove();
-	void initRulers(CL_Window *refwnd);
-  	void OnAddCusBodyClick();
+	void OnAddCusBodyClick();
 	void OnbuttonGrdClick();
-	int eventInit();
+	void OnbuttonJntClick();
+
+	//GUI component on SubBoard respon
 	void OnAddGround();
+	void OnAddJnt();
+
+
+	int eventInit();
 
 	bool isClkOnBoard(b2Vec2 pos,CL_Rect Area);
 
