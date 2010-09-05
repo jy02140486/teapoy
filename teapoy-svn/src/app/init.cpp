@@ -120,7 +120,7 @@ bool T_App::init()
 		addground=new WndGroundAdd();
 		comWindowDesc.set_position(CL_Rect(480,40,CL_Size(320,200)),false)   ;
 		addground->Init(&mGui,&comWindowDesc);
-		addground->cirfirm->func_clicked().set(this,&T_App::OnAddGround)	;
+// 		addground->cirfirm->func_clicked().set(this,&T_App::OnAddGround)	;
 
 		addjoint=new WndJointAdd();
 		comWindowDesc.set_position(CL_Rect(480,40,CL_Size(320,200)),false)	;

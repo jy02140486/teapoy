@@ -4,10 +4,10 @@
 #include "precomp.h"
 #include "Box2D/Box2D.h"
 
+#include "../lib/IDraw.h"
 
-class WndJointAdd
+class WndJointAdd: public Idraw
 {
-
 public:
 
 	CL_Window *window;
@@ -31,5 +31,6 @@ public:
 	void setActivated(bool flag);
 	void showcom(int value, CL_ComboBox *combobox);
 	void ConnectBody(b2Body* body,b2Vec2 pos);
+	void draw(CL_GraphicContext *gc);
 };
  #endif

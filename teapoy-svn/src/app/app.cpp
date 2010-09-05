@@ -35,6 +35,14 @@ void T_App::onMouseUp(const CL_InputEvent &, const CL_InputState &)
 		mpphytester->mj=NULL;
 	}
 
+
+	if (addground->isActivated())
+	{
+		b2Vec2 m_mouseWorld(mMouse.get_x(),mMouse.get_y())  ;
+		addground->drawing=false;
+		addground->AddVertex(m_mouseWorld,1);
+		addground->OnAdd(mpphytester);
+	}
 }
 
 bool T_App::isClkOnBoard(b2Vec2 pos,CL_Rect Area)
@@ -53,8 +61,6 @@ bool T_App::isClkOnBoard(b2Vec2 pos,CL_Rect Area)
 
 void T_App::onMouseDown(const CL_InputEvent &, const CL_InputState &)
 {
-
-	
 //  	mpphytester->phyentity::Push(SM_MOUSEDOWN);
 // 	mpDisplayWindow->get_gc().clear(CL_Colorf::red);
 	b2Vec2 m_mouseWorld (mMouse.get_x(),mMouse.get_y());
@@ -107,9 +113,11 @@ void T_App::onMouseDown(const CL_InputEvent &, const CL_InputState &)
 		}
 	}
 
-	if (addground->isActivated()&&!isClkOnBoard(m_mouseWorld,addground->window->get_geometry()))
+	if (addground->isActivated())
 	{
-		addground->AddVertex(m_mouseWorld);
+		addground->drawing=true;
+
+		addground->AddVertex(m_mouseWorld,0);
 	}
 	
 }
@@ -123,6 +131,10 @@ void T_App::onMouseMove(const CL_InputEvent &, const CL_InputState &)
 		mpphytester->mj->SetTarget(m_mouseWorld);
 	}
 
+	if (addground->isActivated()&&addground->isDrawing())
+	{
+		addground->vertices[1]=m_mouseWorld;
+	}
 }
 
 
