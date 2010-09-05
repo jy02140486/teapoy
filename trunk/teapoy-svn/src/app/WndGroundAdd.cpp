@@ -1,9 +1,10 @@
 #include "WndGroundAdd.h"
 
 
+
 WndGroundAdd::WndGroundAdd(void)
 {
-	cur=0;
+	drawing=false;
 }
 
 WndGroundAdd::~WndGroundAdd(void)
@@ -38,33 +39,43 @@ bool WndGroundAdd::isActivated()
 void WndGroundAdd::setActivated(bool flag)
 {		 
 	  	 window->set_visible(flag);
-		 cur=-1;
 }
 
-void WndGroundAdd::AddVertex(b2Vec2 pos)
+void WndGroundAdd::AddVertex(b2Vec2 pos,int index)
 {
-	  if (cur==0)
-	  {
-		  vertices[cur]=pos;
-		  cur=1;
-	  }
-	   else	 if(cur==1)
-	   { 
-		   vertices[cur]=pos;
-		   cur=0;
-	  }
-	  else
-	  {	  cur=0;
-		  vertices[cur]=pos;
-	   }
+		  vertices[index]=pos;
 }
 
+void WndGroundAdd::OnAdd(phyentity *mpphytester)
+{
+	b2BodyDef bodydef;
+	bodydef.type=b2_staticBody;
+
+	int x=abs((vertices[0].x-vertices[1].x)/2);
+
+	int y =abs((vertices[0].y-vertices[1].y)/2);
+
+	bodydef.position.Set(x,y);
+
+	b2Body *body=mpphytester->world->CreateBody(&bodydef);
+
+	b2PolygonShape shape;
+
+	b2Vec2 p1(abs(vertices[0].x-x),abs(vertices[0].y-y));
+	b2Vec2 p2(abs(vertices[1].x-x),abs(vertices[1].y-y));
+
+	shape.SetAsEdge(p1,p2) ;
+	body->CreateFixture(&shape,0.0f);
+
+// 	setActivated(false);
+
+}
 void WndGroundAdd::draw(CL_GraphicContext *gc)
 {
-	if (cur==-1)
-	{
-		return;
-	}
+// 	if (cur==-1)
+// 	{
+// 		return;
+// 	}
 	CL_Vec4f black_color(0.0f, 0.0f,0.0f, 1.0f);
 	CL_Vec4f ground[]={black_color,black_color};
 

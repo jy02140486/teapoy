@@ -111,3 +111,8 @@ void WndJointAdd::ConnectBody(b2Body* body,b2Vec2 pos)
 		 return;
 	 }
 }
+
+void WndJointAdd::draw(CL_GraphicContext *gc)
+{
+
+}
