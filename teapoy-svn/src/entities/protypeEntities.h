@@ -39,7 +39,7 @@ public:
 	void setConvexVertex(b2PolygonShape *shapeDef,int n,float32 radius);
 	void drawbox(CL_GraphicContext *gc,b2Body *bodyref);
 	void AddBodyTemp();
-
+	void DrawJoints(CL_GraphicContext *gc);
 };
 
 #endif
