@@ -56,6 +56,8 @@ void phyentity::draw(CL_GraphicContext &gc)
 
 	for (b2Body* bbbb=world->GetBodyList();bbbb!=NULL;bbbb=bbbb->GetNext())
 			drawbox(&gc,bbbb);
+
+	DrawJoints(&gc);
 }
 
 void phyentity::updater()
@@ -107,6 +109,33 @@ void phyentity::drawbox(CL_GraphicContext *gc,b2Body *bodyref)
 										
 	gc->set_program_object(cl_program_color_only);
 	gc->draw_primitives(cl_line_loop,vn,vecs);
+}
+
+void phyentity::DrawJoints(CL_GraphicContext *gc)
+{
+	CL_Vec2i positions[2];
+
+	CL_PrimitivesArray vecs(*gc);
+
+	CL_Vec4f red_color(1.0f, 0.0f, 0.0f, 1.0f);
+
+	CL_Vec4f joints[]={red_color,red_color,red_color,red_color,red_color,red_color,red_color,red_color};
+
+	  for(b2Joint *jref=world->GetJointList();jref!=NULL;jref=jref->GetNext())
+	  {
+
+		  positions[0]=CL_Vec2f(jref->GetAnchorA().x,jref->GetAnchorA().y);		  
+		  positions[1]=CL_Vec2f(jref->GetAnchorB().x,jref->GetAnchorB().y);
+
+		  vecs.set_attributes(0,positions);
+		  vecs.set_attributes(1,joints);
+
+		  gc->set_program_object(cl_program_color_only);
+		  gc->draw_primitives(cl_lines,2,vecs);
+
+	  }
+
+
 }
 
 //set vertexes Attributes
