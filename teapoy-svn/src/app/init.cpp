@@ -69,24 +69,45 @@ bool T_App::init()
 		b2BodyTypelist->set_geometry(CL_Rect(40, 110, CL_Size(200, 20)));
 // 		b2BodyTypelist->
 
-		highth=new CL_LineEdit(WndAdd);
-		highth->set_geometry(CL_Rect(80, 150, CL_Size(40, 20)));
-		lbh=new CL_Label(WndAdd);
-		lbh->set_text("hight");
-		lbh->set_geometry(CL_Rect(40, 150, CL_Size(40, 20)))	;
+		BodyTypemenu.insert_item("Matrix",0);
+		BodyTypemenu.insert_item("Circle",1);
 
-		width=new CL_LineEdit(WndAdd);
-		width->set_geometry(CL_Rect(80, 180, CL_Size(40, 20)));
-		lbw=new CL_Label(WndAdd);
+		b2BodyTypelist->set_popup_menu(BodyTypemenu);
+		b2BodyTypelist->set_selected_item(0);
+		b2BodyTypelist->func_item_selected().set(this,&T_App::OnBodyTypeChange,b2BodyTypelist);
+
+		mbd=new CL_Label(WndAdd);
+		mbd->set_geometry(CL_Rect(80, 150, CL_Size(320, 60)));
+
+
+		highth=new CL_LineEdit(mbd);
+		highth->set_geometry(CL_Rect(40, 0, CL_Size(40, 20)));
+		lbh=new CL_Label(mbd);
+		lbh->set_text("hight");
+		lbh->set_geometry(CL_Rect(0,0, CL_Size(40, 20)))	;
+
+		width=new CL_LineEdit(mbd);
+		width->set_geometry(CL_Rect(40,30, CL_Size(40, 20)));
+		lbw=new CL_Label(mbd);
 		lbw->set_text("width");
-		lbw->set_geometry(CL_Rect(40, 180, CL_Size(40, 20)))	;
+		lbw->set_geometry(CL_Rect(0, 30, CL_Size(40, 20)))	;
 
 		mass=new CL_LineEdit(WndAdd);
-		mass->set_geometry(CL_Rect(80, 210, CL_Size(40, 20)));
+		mass->set_geometry(CL_Rect(140, 260, CL_Size(40, 20)));
 		lbm=new CL_Label(WndAdd);
 		lbm->set_text("mass");
-		lbm->set_geometry(CL_Rect(40, 210, CL_Size(40, 20)))	;
+		lbm->set_geometry(CL_Rect(100, 260, CL_Size(40, 20)))	;
 		
+		cbd=new CL_Label(WndAdd);
+		cbd->set_geometry(CL_Rect(80, 150, CL_Size(320, 60)));
+		cbd->set_visible(false);
+
+		R=new CL_LineEdit(cbd);
+		R->set_geometry(CL_Rect(40,0, CL_Size(40, 20)));
+
+		rbm=new CL_Label(cbd);
+		rbm->set_geometry(CL_Rect(0,0, CL_Size(40, 20)));
+		rbm->set_text("Radius");
 
 
 		button1=new CL_PushButton(mpComWindow);
@@ -127,6 +148,7 @@ bool T_App::init()
 		addjoint->Init(&mGui,&comWindowDesc);
 		addjoint->cirfirm->func_clicked().set(this,&T_App::OnAddJnt);
 
+
 		//initail console window
    initRulers(mpComWindow);
    initRulers(WndAdd);
@@ -140,13 +162,19 @@ bool T_App::init()
 
 	mpConsole = new CL_ConsoleWindow("Console", 80, 100);
 	
+	bgr=new CBackGround();
+	
+	bgr->Init(&(mpDisplayWindow->get_gc()));
+
 	}
 	catch (CL_Exception &exception)
 	{
 		CL_Console::write_line("Exception:Init error",
 			exception.get_message_and_stack_trace());
-		mpConsole->display_close_message();
-		return false;
+// 		mpConsole->display_close_message();
+		CL_Console::write_line(exception.get_message_and_stack_trace());
+
+		return true;
 	}
 
 	running=true;

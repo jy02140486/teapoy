@@ -10,6 +10,8 @@
 #include "WndGroundAdd.h"
 #include "WndJointAdd.h"
 
+#include "Bgr.h"
+
 class T_App : public T_Event	
 {
 public:
@@ -30,12 +32,17 @@ public:
 	CL_Window *WndAdd;
 	CL_PushButton *AddCusBody;
 	CL_ComboBox *b2BodyTypelist;
-	CL_LineEdit *highth,*width,*mass;
-	CL_Label *lbw,*lbh,*lbm;
+	CL_LineEdit *highth,*width,*mass,*R;
+	CL_Label *lbw,*lbh,*lbm,*rbm;
+	CL_PopupMenu BodyTypemenu;
 
+	CL_Label *mbd,*cbd;
 	//Sub Wnds
 	WndGroundAdd *addground;
 	WndJointAdd *addjoint;
+
+	//Customize Comms
+	CBackGround *bgr;
 
 	//initial game enviroment
 	bool init();
@@ -58,6 +65,7 @@ public:
 	void OnAddCusBodyClick();
 	void OnbuttonGrdClick();
 	void OnbuttonJntClick();
+	void OnBodyTypeChange(int value, CL_ComboBox *combobox);
 
 	//GUI component on SubBoard respon
 	void OnAddGround();
@@ -67,7 +75,7 @@ public:
 	int eventInit();
 
 	bool isClkOnBoard(b2Vec2 pos,CL_Rect Area);
-
+	
 	//void repaint();
 private:
 

@@ -55,8 +55,13 @@ void phyentity::draw(CL_GraphicContext &gc)
  	CL_Gradient color(CL_Colorf::mediumspringgreen, CL_Colorf::honeydew);
 
 	for (b2Body* bbbb=world->GetBodyList();bbbb!=NULL;bbbb=bbbb->GetNext())
+	{
+		if (bbbb->GetFixtureList()->GetShape()->GetType()!=shapedef.e_circle)
 			drawbox(&gc,bbbb);
-
+		else
+			DrawCircle(&gc,bbbb);
+		
+	}
 	DrawJoints(&gc);
 }
 
@@ -109,6 +114,18 @@ void phyentity::drawbox(CL_GraphicContext *gc,b2Body *bodyref)
 										
 	gc->set_program_object(cl_program_color_only);
 	gc->draw_primitives(cl_line_loop,vn,vecs);
+}
+
+
+void phyentity::DrawCircle(CL_GraphicContext *gc,b2Body *bodyref)
+{
+// 	CL_Gradient color2(CL_Colorf::burlywood, CL_Colorf::honeydew);
+
+	CL_Draw::circle(*gc,
+		bodyref->GetPosition().x,
+		bodyref->GetPosition().y,
+		bodyref->GetFixtureList()->GetShape()->m_radius,
+		CL_Colorf::blueviolet);
 }
 
 void phyentity::DrawJoints(CL_GraphicContext *gc)
