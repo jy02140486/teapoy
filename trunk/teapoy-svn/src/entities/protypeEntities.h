@@ -40,6 +40,7 @@ public:
 	void drawbox(CL_GraphicContext *gc,b2Body *bodyref);
 	void AddBodyTemp();
 	void DrawJoints(CL_GraphicContext *gc);
+	void DrawCircle(CL_GraphicContext *gc,b2Body *bodyref);
 };
 
 #endif

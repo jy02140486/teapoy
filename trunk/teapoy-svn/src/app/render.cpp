@@ -10,6 +10,7 @@ void T_App::render()
 		addground->draw(&mpDisplayWindow->get_gc());
 	}
 	
+	bgr->draw(&mpDisplayWindow->get_gc());
 	
 	mpWinManager->draw_windows(mpDisplayWindow->get_gc());
 	mpDisplayWindow->flip();
