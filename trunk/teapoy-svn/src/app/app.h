@@ -58,7 +58,9 @@ public:
 	void onMouseDown(const CL_InputEvent &, const CL_InputState &);
 	void onMouseUp(const CL_InputEvent &, const CL_InputState &);
 	void initRulers(CL_Window *refwnd);
-  
+	void onKeyboardUp(const CL_InputEvent &key,
+		const CL_InputState &state);
+
 	//GUI component on MainBoard respon
 	void OnButton1click();
 	void OnSliderMove();

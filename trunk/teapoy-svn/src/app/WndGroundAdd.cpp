@@ -55,16 +55,16 @@ void WndGroundAdd::OnAdd(phyentity *mpphytester)
 
 	int y =abs((vertices[0].y-vertices[1].y)/2);
 
-	bodydef.position.Set(x,y);
+	bodydef.position.Set(vertices[0].x,vertices[0].y);
 
 	b2Body *body=mpphytester->world->CreateBody(&bodydef);
 
 	b2PolygonShape shape;
 
-	b2Vec2 p1(abs(vertices[0].x-x),abs(vertices[0].y-y));
-	b2Vec2 p2(abs(vertices[1].x-x),abs(vertices[1].y-y));
+	b2Vec2 p(vertices[1].x-vertices[0].x,vertices[1].y-vertices[0].y);
+// 	b2Vec2 p2(vertices[1].x-x),abs(vertices[0].y-y);
 
-	shape.SetAsEdge(p1,p2) ;
+	shape.SetAsEdge(b2Vec2(0.0f,0.0f),p) ;
 	body->CreateFixture(&shape,0.0f);
 
 // 	setActivated(false);

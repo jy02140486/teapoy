@@ -34,7 +34,7 @@ void phyentity::Initialize()
 
 	setConvexVertex(&shapedef,4,20);
 
- 	groundBox.SetAsEdge(b2Vec2(-10.0f,0.0f),b2Vec2(600.0f,0.0f));
+ 	groundBox.SetAsEdge(b2Vec2(0.0f,0.0f),b2Vec2(600.0f,0.0f));
 
 	groundBody->CreateFixture(&groundBox,0.0f);
 	groundBody->GetFixtureList()->SetFriction(0.0f);

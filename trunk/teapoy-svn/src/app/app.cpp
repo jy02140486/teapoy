@@ -147,6 +147,20 @@ int T_App::eventInit()
 		&T_App::onMouseDown);
 	slotMouseUp=mMouse.sig_key_up().connect(this,
 		&T_App::onMouseUp);
+	slotKeyboardUp=mKeyboard.sig_key_up().connect(this, 
+		&T_App::onKeyboardUp);
 
 	return 0;
+}
+
+void T_App::onKeyboardUp(const CL_InputEvent &key,
+						   const CL_InputState &state)
+{
+	if(key.id == CL_KEY_ESCAPE)
+		if (mpComWindow->is_visible())
+		{
+			mpComWindow->set_visible(false);
+		}
+		else
+			mpComWindow->set_visible(true);
 }
