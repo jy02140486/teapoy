@@ -1,5 +1,7 @@
 #include "Bgr.h"
 #include <math.h>
+#include <string>
+#include <stdio.h>
 
 CBackGround::CBackGround()
 {
@@ -18,8 +20,23 @@ void CBackGround::Init(CL_GraphicContext *gc)
 	time(&mrka);
 	try
 	{
-		sd1.add_frame(CL_ImageProviderFactory::load("resource/Sprites/cloudy_sky.png"));
-		sd1.add_frame(CL_ImageProviderFactory::load("resource/Sprites/1.png"));
+// 		sd1.add_frame(CL_ImageProviderFactory::load("resource/Sprites/1.png"));
+// 		sd1.add_frame(CL_ImageProviderFactory::load("resource/Sprites/2.png"));
+// 		sd1.add_frame(CL_ImageProviderFactory::load("resource/Sprites/3.png"));
+// 		sd1.add_frame(CL_ImageProviderFactory::load("resource/Sprites/1.png"));
+
+		for(int i=1;i<10;i++)
+		{	
+			std::string str="resource/Sprites/a0";
+			char* num=new char(10);
+			sprintf(num,"%d.png",i);
+			str.append(num);
+			sd1.add_frame(CL_ImageProviderFactory::load(str.data()));
+			CL_Console::write_line(str.data());
+// 			delete[]num;
+		}
+
+		sd1.add_frame(CL_ImageProviderFactory::load("resource/Sprites/a10.png"));
 
 		sd1.set_frame_delay(1,1);
 
@@ -50,12 +67,14 @@ void CBackGround::Init(CL_GraphicContext *gc)
 }
 void CBackGround::Update()
 {
+
+	clouds->update();
+
 	time(&mrkb);
 	
 	if (mrkb-mrka<1)
 	{
-
-		 return;
+ return;
 	}
 
 	time(&mrka);
