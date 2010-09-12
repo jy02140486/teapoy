@@ -1,5 +1,5 @@
 #include "app.h"
-#include "querryback.h"
+#include "../entities/querryback.h"
 
 T_App::T_App()
 {

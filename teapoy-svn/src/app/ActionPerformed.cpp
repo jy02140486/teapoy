@@ -1,5 +1,6 @@
 #include "app.h"
 #include "event.h"
+#include "../entities/EditngListener.h"
 
 void T_App::OnButton1click()
 {
@@ -138,12 +139,16 @@ void T_App::OnButtonEditClick()
 {
 	if (edit->isActivated())
 	{
+		mpphytester->world->SetContactListener(NULL);
+
 		for(b2Body* temp=mpphytester->world->GetBodyList();temp!=NULL;temp=temp->GetNext())
 			temp->SetAwake(true);
 		edit->setActivated(false);
 		running=true;
 	}
 	else{
+		mpphytester->world->SetContactListener(new EditingListener());
+
 		for(b2Body* temp=mpphytester->world->GetBodyList();temp!=NULL;temp=temp->GetNext())
 			temp->SetAwake(false);
 		edit->setActivated(true);
