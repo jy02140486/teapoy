@@ -138,10 +138,14 @@ void T_App::OnButtonEditClick()
 {
 	if (edit->isActivated())
 	{
+		for(b2Body* temp=mpphytester->world->GetBodyList();temp!=NULL;temp=temp->GetNext())
+			temp->SetAwake(true);
 		edit->setActivated(false);
 		running=true;
 	}
 	else{
+		for(b2Body* temp=mpphytester->world->GetBodyList();temp!=NULL;temp=temp->GetNext())
+			temp->SetAwake(false);
 		edit->setActivated(true);
 		running=false;
 	}

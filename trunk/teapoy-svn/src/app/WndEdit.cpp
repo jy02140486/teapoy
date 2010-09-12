@@ -15,6 +15,7 @@ void WndEdit::Init(CL_GUIManager *gui,CL_DisplayWindowDescription *desc)
 	cirfirm->set_text("cirfirm edit");
 	cirfirm->set_geometry(CL_Rect(40, 90, CL_Size(200, 20)))	 ;
 
+	bodyref=NULL;
 }
 
 bool WndEdit::isActivated()

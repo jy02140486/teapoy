@@ -67,13 +67,12 @@ bool T_App::init()
 		comWindowDesc.show_border(false);
 		comWindowDesc.set_allow_resize(true);
 		comWindowDesc.set_title("Edit scene");
-		comWindowDesc.set_size(CL_Size(300, 320),false);
+		comWindowDesc.set_size(CL_Size(300, 120),false);
 		comWindowDesc.set_allow_resize(true);
 		comWindowDesc.set_layered(true);
 
 		edit=new WndEdit();
 		edit->Init(&mGui,&comWindowDesc);
-		edit->cirfirm->func_clicked().set(this,&T_App::OnButtonEditClick);
 
 		b2BodyTypelist=new CL_ComboBox(WndAdd);
 		b2BodyTypelist->set_geometry(CL_Rect(40, 110, CL_Size(200, 20)));
@@ -139,6 +138,8 @@ bool T_App::init()
 		buttonEdit=new CL_PushButton(mpComWindow);
 		buttonEdit->set_geometry(CL_Rect(120,80,CL_Size(70,30)));
 		buttonEdit->set_text("Edit Scene");
+		buttonEdit->func_clicked().set(this,&T_App::OnButtonEditClick);
+
 
 		
 		//CL_Rect *a=new CL_Rect()

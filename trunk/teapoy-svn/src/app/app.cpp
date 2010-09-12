@@ -43,6 +43,23 @@ void T_App::onMouseUp(const CL_InputEvent &, const CL_InputState &)
 		addground->AddVertex(m_mouseWorld,1);
 		addground->OnAdd(mpphytester);
 	}
+
+	//ops of editing scene
+	if (edit->isActivated()&&edit->bodyref!=NULL)
+	{
+		edit->bodyref->SetAwake(false);
+
+		edit->bodyref=NULL;
+	}
+		// 	}
+// 	if (edit->isActivated())
+// 	{
+// 		for(b2Body* temp=mpphytester->world->GetBodyList();temp!=NULL;temp=temp->GetNext())
+// 			temp->SetAwake(false);
+// 
+// 		edit->bodyref=  body;
+// 		return;
+// 	}
 }
 
 bool T_App::isClkOnBoard(b2Vec2 pos,CL_Rect Area)
@@ -61,16 +78,8 @@ bool T_App::isClkOnBoard(b2Vec2 pos,CL_Rect Area)
 
 void T_App::onMouseDown(const CL_InputEvent &, const CL_InputState &)
 {
-//  	mpphytester->phyentity::Push(SM_MOUSEDOWN);
-// 	mpDisplayWindow->get_gc().clear(CL_Colorf::red);
+
 	b2Vec2 m_mouseWorld (mMouse.get_x(),mMouse.get_y());
-
-
-// 	if (isClkOnBoard(m_mouseWorld,mpComWindow->get_geometry()))
-// 	{
-// 		return;
-// 	}
-
 
 	if (mpphytester->mj != NULL)
 	{
@@ -93,15 +102,23 @@ void T_App::onMouseDown(const CL_InputEvent &, const CL_InputState &)
 	if (callingback.m_fixture)
 	{
 		b2Body* body = callingback.m_fixture->GetBody();
-		//	b2MouseJointDef mpphytester->mjd;
+
+		//ops of editing scene
+		if (edit->isActivated())
+		{
+			for(b2Body* temp=mpphytester->world->GetBodyList();temp!=NULL;temp=temp->GetNext())
+				temp->SetAwake(false);
+
+			edit->bodyref=  body;
+// 			return;
+		}
+
 		if (!addjoint->isActivated())
 		{
 			mpphytester->mjd.bodyA = mpphytester->groundBody;
 			mpphytester->mjd.bodyB = body;
 			mpphytester->mjd.target = m_mouseWorld;
 			mpphytester->mjd.maxForce = 1000.0f * body->GetMass();
-	
-			//	mpphytester->mjd.frequencyHz=1/30.0f;
 	
 			mpphytester->mj = (b2MouseJoint*)mpphytester->world->CreateJoint(&mpphytester->mjd);
 	
@@ -113,18 +130,13 @@ void T_App::onMouseDown(const CL_InputEvent &, const CL_InputState &)
 		}
 	}
 
-
+ //ops of adding groundbody
 	if (addground->isActivated())
 	{
-// 		if (addground->first)
-// 		{
-// 			addground->first=false;
-// 			return;
-// 		}
 		addground->drawing=true;
-
 		addground->AddVertex(m_mouseWorld,0);
 	}
+
 }
 
 void T_App::onMouseMove(const CL_InputEvent &, const CL_InputState &)
@@ -141,6 +153,7 @@ void T_App::onMouseMove(const CL_InputEvent &, const CL_InputState &)
 		addground->vertices[1]=m_mouseWorld;
 		addground->first=false;
 	}
+
 }
 
 
