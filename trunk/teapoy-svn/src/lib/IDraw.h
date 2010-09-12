@@ -1,7 +1,7 @@
 #ifndef IDRAW_H
 #define	IDRAW_H
 
-#include "precomp.h"
+#include "../app/precomp.h"
 
 class   Idraw
 {
