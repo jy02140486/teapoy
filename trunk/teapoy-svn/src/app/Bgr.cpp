@@ -2,6 +2,7 @@
 #include <math.h>
 #include <string>
 #include <stdio.h>
+#include <stdlib.h>
 
 CBackGround::CBackGround()
 {

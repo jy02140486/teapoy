@@ -1,7 +1,7 @@
 #ifndef QUERRY_H
 #define QUERRY_H 
 
-#include "precomp.h"
+#include "../app/precomp.h"
 
 class QueryCallback : public b2QueryCallback
 { 

@@ -2,7 +2,7 @@
 #define WNDEDIT_H
 
 #include "precomp.h"
-#include "box2d/box2d.h"
+#include "Box2D/Box2D.h"
 
 class WndEdit
 {
