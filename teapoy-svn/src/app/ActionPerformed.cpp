@@ -66,44 +66,13 @@ void T_App::OnAddCusBodyClick()
 
 void T_App::OnbuttonGrdClick()
 {
-// 	   if (!addground->window->is_visible())
-// 	   {
-// 		   addground->window->set_visible(true);
-// 
-// 	   }
-// 	   else
-// 	   addground->window->set_visible(false);
 	if (addground->isActivated())
 	{
 		addground->setActivated(false);
 	}										
 	else addground->setActivated(true);
- 
 }
 
-void T_App::OnAddGround()
-{
-	b2BodyDef bodydef;
-	bodydef.type=b2_staticBody;
-	
-	int x=abs((addground->vertices[0].x-addground->vertices[1].x)/2);
-
-	int y =abs((addground->vertices[0].y-addground->vertices[1].y)/2);
-
-	bodydef.position.Set(x,y);
-
-	b2Body *body=mpphytester->world->CreateBody(&bodydef);
-
-	b2PolygonShape shape;
-	
-	b2Vec2 p1(abs(addground->vertices[0].x-x),abs(addground->vertices[0].y-y));
-	b2Vec2 p2(abs(addground->vertices[1].x-x),abs(addground->vertices[1].y-y));
-
-	shape.SetAsEdge(p1,p2) ;
-	body->CreateFixture(&shape,0.0f);
-
-	 addground->setActivated(false);
-}
 
 void T_App::OnbuttonJntClick()
 {
@@ -163,4 +132,17 @@ void T_App::OnBodyTypeChange(int value, CL_ComboBox *combobox)
 		break;
 	}
 
+}
+
+void T_App::OnButtonEditClick()
+{
+	if (edit->isActivated())
+	{
+		edit->setActivated(false);
+		running=true;
+	}
+	else{
+		edit->setActivated(true);
+		running=false;
+	}
 }

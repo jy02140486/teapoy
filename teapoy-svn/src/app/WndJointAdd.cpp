@@ -10,7 +10,7 @@ WndJointAdd::~WndJointAdd(void)
 
 void WndJointAdd::Init(CL_GUIManager *gui,CL_DisplayWindowDescription *desc)
 {
-	window=new CL_Window(gui,*desc);
+	window=new CL_Window(gui,*desc);						 
 	window->set_visible(false);
 	window->set_draggable(true);
 

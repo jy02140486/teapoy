@@ -36,7 +36,7 @@ void T_App::onMouseUp(const CL_InputEvent &, const CL_InputState &)
 	}
 
 
-	if (addground->isActivated())
+	if (addground->isActivated()&&!addground->first)
 	{
 		b2Vec2 m_mouseWorld(mMouse.get_x(),mMouse.get_y())  ;
 		addground->drawing=false;
@@ -66,10 +66,10 @@ void T_App::onMouseDown(const CL_InputEvent &, const CL_InputState &)
 	b2Vec2 m_mouseWorld (mMouse.get_x(),mMouse.get_y());
 
 
-	if (isClkOnBoard(m_mouseWorld,mpComWindow->get_geometry()))
-	{
-		return;
-	}
+// 	if (isClkOnBoard(m_mouseWorld,mpComWindow->get_geometry()))
+// 	{
+// 		return;
+// 	}
 
 
 	if (mpphytester->mj != NULL)
@@ -113,13 +113,18 @@ void T_App::onMouseDown(const CL_InputEvent &, const CL_InputState &)
 		}
 	}
 
+
 	if (addground->isActivated())
 	{
+// 		if (addground->first)
+// 		{
+// 			addground->first=false;
+// 			return;
+// 		}
 		addground->drawing=true;
 
 		addground->AddVertex(m_mouseWorld,0);
 	}
-	
 }
 
 void T_App::onMouseMove(const CL_InputEvent &, const CL_InputState &)
@@ -134,6 +139,7 @@ void T_App::onMouseMove(const CL_InputEvent &, const CL_InputState &)
 	if (addground->isActivated()&&addground->isDrawing())
 	{
 		addground->vertices[1]=m_mouseWorld;
+		addground->first=false;
 	}
 }
 

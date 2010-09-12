@@ -63,7 +63,17 @@ bool T_App::init()
 		AddCusBody->set_text("Comfirm");
 		AddCusBody->func_clicked().set(this,&T_App::OnAddCusBodyClick);
 		
+		comWindowDesc.set_position(CL_Rect(480,0,CL_Size(220,100)),false);
+		comWindowDesc.show_border(false);
+		comWindowDesc.set_allow_resize(true);
+		comWindowDesc.set_title("Edit scene");
+		comWindowDesc.set_size(CL_Size(300, 320),false);
+		comWindowDesc.set_allow_resize(true);
+		comWindowDesc.set_layered(true);
 
+		edit=new WndEdit();
+		edit->Init(&mGui,&comWindowDesc);
+		edit->cirfirm->func_clicked().set(this,&T_App::OnButtonEditClick);
 
 		b2BodyTypelist=new CL_ComboBox(WndAdd);
 		b2BodyTypelist->set_geometry(CL_Rect(40, 110, CL_Size(200, 20)));
@@ -124,6 +134,13 @@ bool T_App::init()
 		buttonJnt->set_geometry(CL_Rect(120,50,CL_Size(70,30)));
 		buttonJnt->set_text("Add a Joint");
 		buttonJnt->func_clicked().set(this,&T_App::OnbuttonJntClick);
+
+
+		buttonEdit=new CL_PushButton(mpComWindow);
+		buttonEdit->set_geometry(CL_Rect(120,80,CL_Size(70,30)));
+		buttonEdit->set_text("Edit Scene");
+
+		
 		//CL_Rect *a=new CL_Rect()
 
 		slider_vertical = new CL_Slider(mpComWindow);
@@ -141,7 +158,6 @@ bool T_App::init()
 		addground=new WndGroundAdd();
 		comWindowDesc.set_position(CL_Rect(480,40,CL_Size(320,200)),false)   ;
 		addground->Init(&mGui,&comWindowDesc);
-// 		addground->cirfirm->func_clicked().set(this,&T_App::OnAddGround)	;
 
 		addjoint=new WndJointAdd();
 		comWindowDesc.set_position(CL_Rect(480,40,CL_Size(320,200)),false)	;
