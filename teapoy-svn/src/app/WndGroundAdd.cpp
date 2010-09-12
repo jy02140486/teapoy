@@ -39,7 +39,7 @@ bool WndGroundAdd::isActivated()
 
 void WndGroundAdd::setActivated(bool flag)
 {		 
-	first=flag;
+		first=true;
 	  	 window->set_visible(flag);
 }
 
@@ -75,10 +75,7 @@ void WndGroundAdd::OnAdd(phyentity *mpphytester)
 }
 void WndGroundAdd::draw(CL_GraphicContext *gc)
 {
-// 	if (cur==-1)
-// 	{
-// 		return;
-// 	}
+
 	CL_Vec4f black_color(0.0f, 0.0f,0.0f, 1.0f);
 	CL_Vec4f ground[]={black_color,black_color};
 
