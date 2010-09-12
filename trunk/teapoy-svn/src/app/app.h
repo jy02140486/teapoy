@@ -9,7 +9,7 @@
 //Sub Wnds
 #include "WndGroundAdd.h"
 #include "WndJointAdd.h"
-
+#include "WndEdit.h"
 #include "Bgr.h"
 
 class T_App : public T_Event	
@@ -23,7 +23,7 @@ public:
 	bool running;
 
 	//GUIComponets
-	CL_PushButton *button1,*buttonGrd,*buttonJnt;
+	CL_PushButton *button1,*buttonGrd,*buttonJnt,*buttonEdit;
 	CL_Slider *slider_vertical;
 	CL_Label *Label1;
 	std::list<CL_Label*> rulers;
@@ -40,6 +40,7 @@ public:
 	//Sub Wnds
 	WndGroundAdd *addground;
 	WndJointAdd *addjoint;
+	WndEdit *edit;
 
 	//Customize Comms
 	CBackGround *bgr;
@@ -67,17 +68,18 @@ public:
 	void OnAddCusBodyClick();
 	void OnbuttonGrdClick();
 	void OnbuttonJntClick();
+	void OnButtonEditClick();
+
 	void OnBodyTypeChange(int value, CL_ComboBox *combobox);
 
 	//GUI component on SubBoard respon
-	void OnAddGround();
 	void OnAddJnt();
 
 
 	int eventInit();
 
 	bool isClkOnBoard(b2Vec2 pos,CL_Rect Area);
-	
+
 	//void repaint();
 private:
 

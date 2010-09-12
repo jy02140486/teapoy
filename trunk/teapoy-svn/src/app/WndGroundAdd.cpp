@@ -5,6 +5,7 @@
 WndGroundAdd::WndGroundAdd(void)
 {
 	drawing=false;
+	first=true;
 }
 
 WndGroundAdd::~WndGroundAdd(void)
@@ -38,6 +39,7 @@ bool WndGroundAdd::isActivated()
 
 void WndGroundAdd::setActivated(bool flag)
 {		 
+	first=flag;
 	  	 window->set_visible(flag);
 }
 
@@ -48,6 +50,7 @@ void WndGroundAdd::AddVertex(b2Vec2 pos,int index)
 
 void WndGroundAdd::OnAdd(phyentity *mpphytester)
 {
+
 	b2BodyDef bodydef;
 	bodydef.type=b2_staticBody;
 

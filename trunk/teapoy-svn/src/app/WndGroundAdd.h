@@ -15,6 +15,7 @@ class WndGroundAdd:public Idraw
 	CL_Label *label;
 	CL_PushButton *cirfirm;
 
+	bool first;
 	bool drawing;
 	b2Vec2 vertices[2];
 	WndGroundAdd(void);
