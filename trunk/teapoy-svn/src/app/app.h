@@ -45,6 +45,9 @@ public:
 	//Customize Comms
 	CBackGround *bgr;
 
+	time_t Atime;
+	DWORD mrk;
+
 	//initial game enviroment
 	bool init();
 

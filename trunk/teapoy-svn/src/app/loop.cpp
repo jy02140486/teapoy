@@ -1,4 +1,5 @@
 #include "app.h"
+#include "time.h"
 
 void T_App::loop()
 {
@@ -8,9 +9,18 @@ void T_App::loop()
 	}
 
 	mpphytester->getEntities()->updater();
+   
+	time_t Btime;
 
+	time(&Btime);
 
-	CL_KeepAlive::process();
+	if (Btime-Atime>1/33)
+	{
+		double i=Btime-Atime;
+		CL_Console::write_line("%1",slider_vertical->get_position());
+		CL_Console::write_line("%1",1.0f/mpphytester->timeStep);
 
-	mGui.exec(false);
+		time(&Atime);	
+		CL_KeepAlive::process();
+	}
 }

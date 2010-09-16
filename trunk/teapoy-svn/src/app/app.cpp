@@ -1,5 +1,6 @@
 #include "app.h"
 #include "../entities/querryback.h"
+#define FPS 44
 
 T_App::T_App()
 {
@@ -13,10 +14,18 @@ int T_App::start()
 		return -1;
 	}
 
+	int fps=FPS;
+	mrk=GetTickCount();
+
 	while (!mQuit)
 	{
-		mGui.exec(false);
-		loop();
+		if (GetTickCount()-mrk>1000/fps)
+		{
+			mGui.exec(false);
+			loop();
+			mrk=GetTickCount();
+		}
+		else Sleep(1000.0/fps-(GetTickCount()-mrk));
 	}
 
 	return 0;
@@ -118,7 +127,10 @@ void T_App::onMouseDown(const CL_InputEvent &, const CL_InputState &)
 			mpphytester->mjd.bodyA = mpphytester->groundBody;
 			mpphytester->mjd.bodyB = body;
 			mpphytester->mjd.target = m_mouseWorld;
-			mpphytester->mjd.maxForce = 1000.0f * body->GetMass();
+			mpphytester->mjd.maxForce = 10000.0f * body->GetMass();
+			mpphytester->mjd.frequencyHz=120;
+			mpphytester->mjd.dampingRatio=1;
+			
 	
 			mpphytester->mj = (b2MouseJoint*)mpphytester->world->CreateJoint(&mpphytester->mjd);
 	
