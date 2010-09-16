@@ -1,5 +1,6 @@
 #include "app.h"
 #include "event.h"
+#include <time.h>
 
 bool T_App::init()
 {
@@ -146,9 +147,9 @@ bool T_App::init()
 
 		slider_vertical = new CL_Slider(mpComWindow);
 		slider_vertical->set_geometry(CL_Rect(40, 130, CL_Size(200, 20)));
-		slider_vertical->set_max(240);
-		slider_vertical->set_min(0);
-		slider_vertical->set_position(240);
+		slider_vertical->set_max(120);
+		slider_vertical->set_min(1);
+		slider_vertical->set_position(120);
 
 		slider_vertical->func_value_changed().set(this,&T_App::OnSliderMove)	;
 
@@ -183,6 +184,7 @@ bool T_App::init()
 	
 	bgr->Init(&(mpDisplayWindow->get_gc()));
 
+	time(&Atime);
 	}
 	catch (CL_Exception &exception)
 	{
